@@ -1,0 +1,14 @@
+{
+  "name": "reyhoon-vue-full-stack",
+  "version": "0.0.1",
+  "description": "runs both clients and server at the same time",
+  "scripts": {
+    "client": "cd frontend && npm run serve",
+    "server": "cd backend && npm run dev",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Melika Abdolahi",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
