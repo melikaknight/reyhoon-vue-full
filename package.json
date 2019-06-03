@@ -5,6 +5,10 @@
   "scripts": {
     "client": "cd frontend && npm run serve",
     "server": "cd backend && npm run dev",
+    "setup:self": "npm i",
+    "setup:client": "cd frontend && npm i",
+    "setup:server": "cd backend && npm i",
+    "setup": "concurrently \"npm run setup:self\" \"npm run setup:client\" \"npm run setup:server\"",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Melika Abdolahi",
