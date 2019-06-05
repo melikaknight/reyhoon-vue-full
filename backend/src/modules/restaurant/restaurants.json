@@ -1,0 +1,109 @@
+[
+  { 
+    "name": "لانجین(دادمان)",
+    "slug": "lanjin",
+    "address": "شهرک غرب، خیابان دادمان ، پلاک ۳۶",
+    "area": "saadat-abad",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/langine_4867_1538558144.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "fast-food",
+    "openingTime": "19:00",
+    "closingTime": "23:30",
+    "averageRating": "4.2"
+  },
+  {
+    "name": "بیژن",
+    "slug": "bijan",
+    "address": "خیابان میرداماد، میدان مادر، خیابان بهروز، برج بیژن",
+    "area": "saadat-abad",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bijan-fasfood_464_1520945292.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "irani",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "3.8"
+  },
+  {
+    "name": "لیدوما",
+    "slug": "lidoma",
+    "address": "قیطریه ، بلوار قیطریه ، روبروی پارک",
+    "area": "elahiye",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/lidoma_3137_1520945331.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "fast-food",
+    "openingTime": "19:30",
+    "closingTime": "22:30",
+    "averageRating": "3.2"
+  },
+  {
+    "name": "باماهاس",
+    "slug": "bamahas",
+    "address": "بالاتر از میدان باهنر، محله نیاوران، میدان نیاوران",
+    "area": "farmaniye",
+    "logo_url": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bamahas_1400_1520945270.jpeg",
+    "category": "pizza",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "3.4"
+  },
+  {
+    "name": "چاپ چاپ",
+    "slug": "chapchap",
+    "address": "خیابان فرشته، خیابان بوسنی و هرزگوین، پلاک ۲۳، مجتمع تجاری مینیاتور، طبقه همکف",
+    "area": "farmaniye",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/chop-chop_1505_1542013057.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "irani",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "2.2"
+  },
+  {
+    "name": "فست فود شن",
+    "slug": "shen",
+    "address": "بلوار معالی آباد، بلوار دوستان، نبش کوچه ششم",
+    "area": "farhang-shahr",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/shen-fastfood_2191_1520945287.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "fast-food",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "4.8"
+  },
+  {
+    "name": "طوبی",
+    "slug": "tooba",
+    "address": "معالی آباد، روبروی پارک ملت، نبش کوچه ۲۹",
+    "area": "farhang-shahr",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/tooba-catering_2210_1520945289.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "sandwich",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "3.2"
+  },
+  {
+    "name": "برنتین",
+    "slug": "berantin",
+    "address": "خیابان ستارخان، نبش کوچه ۱۲",
+    "area": "satar-khan",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/brentine_7061_1552741601.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "irani",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "3.2"
+  },
+  {
+    "name": "صوفی",
+    "slug": "soofi",
+    "address": "خیابان عفیف آباد",
+    "area": "satar-khan",
+    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/soofi-restaurant_2320_1520945292.jpeg",
+    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "category": "irani",
+    "openingTime": "13:00",
+    "closingTime": "16:30",
+    "averageRating": "4.5"
+  }
+]

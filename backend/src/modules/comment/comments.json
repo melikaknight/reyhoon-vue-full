@@ -1,0 +1,34 @@
+[
+  {
+    "author": "elahe",
+    "restaurant": "berantin",
+    "quality": "4",
+    "packaging": "4.5",
+    "deliveryTime": "5",
+    "comment": "سالاد و قاشق و چنگال نداشت😠😠"
+  },
+  {
+    "author": "elahe",
+    "restaurant": "soofi",
+    "quality": "4.2",
+    "packaging": "4",
+    "deliveryTime": "3.5",
+    "comment": "عالی بود همه چی"
+  },
+  {
+    "author": "fariba",
+    "restaurant": "lanjin",
+    "quality": "4.2",
+    "packaging": "4.9",
+    "deliveryTime": "3",
+    "comment": "غذا خوب بود ولی خیلی دیر به دستم رسید"
+  },
+  {
+    "author": "mohammad",
+    "restaurant": "bijan",
+    "quality": "2",
+    "packaging": "3",
+    "deliveryTime": "3",
+    "comment": "کیفیت غذا خیلی بد بود اصلا پیشنهاد نمیکنم"
+  }
+]

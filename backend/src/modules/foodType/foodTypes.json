@@ -1,0 +1,34 @@
+[
+  {
+    "foodType": "ایرانی",
+    "slug": "irani"
+  },
+  {
+    "foodType": "فست فود",
+    "slug": "fast-food"
+  },
+  {
+    "foodType": "ساندویچ",
+    "slug": "sandwich"
+  },
+  {
+    "foodType": "برگر",
+    "slug": "burger"
+  },
+  {
+    "foodType": "سالاد",
+    "slug": "salad"
+  },
+  {
+    "foodType": "پیتزا",
+    "slug": "pizza"
+  },
+  {
+    "foodType": "خورشت",
+    "slug": "stew"
+  },
+  {
+    "foodType": "کباب",
+    "slug": "kabab"
+  }
+]

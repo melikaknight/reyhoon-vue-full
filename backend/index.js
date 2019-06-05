@@ -6,6 +6,9 @@ const debug = require('debug')('node-server:index');
 const config = require('./src/config');
 const server = require('./src/server');
 
+// database seeder
+const dbSeeder = require('./src/seeder');
+
 // make bluebird default Promise
 Promise = require('bluebird'); // eslint-disable-line no-global-assign
 
@@ -13,11 +16,13 @@ Promise = require('bluebird'); // eslint-disable-line no-global-assign
 mongoose.Promise = Promise;
 
 // connect to mongo db
-const mongoUri = config.mongo.host;
+const mongoUri = `${config.mongo.host}:${config.mongo.port}`;
 mongoose.connect(mongoUri, {
   useCreateIndex: true,
   useNewUrlParser: true,
   promiseLibrary: Promise,
+  useFindAndModify: false,
+  dbName: config.mongo.dbName,
 });
 mongoose.connection.on('error', () => {
   throw new Error(`unable to connect to database: ${mongoUri}`);
@@ -26,6 +31,8 @@ mongoose.connection.on('error', () => {
 // db connection successful
 mongoose.connection.on('open', () => {
   debug('db connected');
+  debug('seeding db...');
+  dbSeeder();
 });
 
 // print mongoose logs in dev env

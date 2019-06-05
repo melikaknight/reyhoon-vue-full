@@ -1,0 +1,58 @@
+[
+  {
+    "name": "پیتزا استیک",
+    "price": "27000",
+    "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
+    "foodType": "pizza",
+    "restaurant": "lanjin",
+    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304435_1529931896.jpeg"
+  },
+  {
+    "name": "پیتزا چیکن",
+    "price": "34000",
+    "ingredients": "فیله مرغ طعم دار شده، قارچ، فلفل دلمه و پنیز موزارلا",
+    "foodType": "pizza",
+    "restaurant": "lanjin",
+    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304438_1529931275.jpeg"
+  },
+  {
+    "name": "همبرگر سینگل",
+    "price": "21000",
+    "ingredients": "",
+    "foodType": "burger",
+    "restaurant": "lanjin",
+    "image": ""
+  },
+  {
+    "name": "سالاد لانجین",
+    "price": "12000",
+    "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
+    "foodType": "salad",
+    "restaurant": "lanjin",
+    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304122_1529931529.jpeg"
+  },
+  {
+    "name": "پلومرغ هندی",
+    "price": "35500",
+    "ingredients": "",
+    "foodType": "irani",
+    "restaurant": "berantin",
+    "image": ""
+  },
+  {
+    "name": "ته چین مرغ و بادمجان",
+    "price": "28000",
+    "ingredients": "",
+    "foodType": "irani",
+    "restaurant": "berantin",
+    "image": ""
+  },
+  {
+    "name": "چلو گوشت قشقایی",
+    "price": "45000",
+    "ingredients": "",
+    "foodType": "stew",
+    "restaurant": "berantin",
+    "image": ""
+  }
+]
