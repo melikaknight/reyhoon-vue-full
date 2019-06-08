@@ -1,8 +1,5 @@
-const Promise = require('bluebird');
 const mongoose = require('mongoose');
-// const _ = require('lodash');
-const httpStatus = require('http-status');
-const APIError = require('../../helpers/APIError');
+
 /**
  * Comment Schema
  */
@@ -30,8 +27,22 @@ const CommentSchema = new mongoose.Schema({
   comment: {
     type: String,
   },
-}, { timestamps: true });
+}, {
+  timestamps: true,
+  toObject: { virtuals: true },
+  toJSON: { virtuals: true },
+});
 
+// This field is dynamically generated and is the average rating of a comment
+// eslint-disable-next-line func-names
+CommentSchema.virtual('rating').get(function () {
+  const {
+    quality,
+    packaging,
+    deliveryTime,
+  } = this;
+  return parseFloat((quality + packaging + deliveryTime) / 3).toFixed(1);
+});
 /**
   Database logic should be encapsulated within the data model. Mongoose provides
   2 ways of doing this, methods and statics. Methods adds an instance method to
@@ -49,19 +60,7 @@ CommentSchema.method({});
 CommentSchema.statics = {
 
   get(id) {
-    return this.findById(id)
-      .exec()
-      .then((comment) => {
-        if (comment) {
-          return comment;
-        }
-        const err = new APIError(
-          'No such comment exists!',
-          httpStatus.NOT_FOUND,
-          true
-        );
-        return Promise.reject(err);
-      });
+    return this.findById(id).exec();
   },
 };
 

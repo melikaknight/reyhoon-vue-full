@@ -1,8 +1,4 @@
-const Promise = require('bluebird');
 const mongoose = require('mongoose');
-// const _ = require('lodash');
-const httpStatus = require('http-status');
-const APIError = require('../../helpers/APIError');
 /**
  * City Schema
  */
@@ -21,38 +17,25 @@ const CitySchema = new mongoose.Schema({
   }],
 }, { timestamps: true });
 
-/**
-  Database logic should be encapsulated within the data model. Mongoose provides
-  2 ways of doing this, methods and statics. Methods adds an instance method to
-  documents whereas Statics adds static "class" methods to the Models itself.
-*/
-
-/**
- * Methods
- */
-CitySchema.method({});
-
-/**
- * Statics
- */
 CitySchema.statics = {
 
-  get(id) {
-    return this.findById(id)
-      .populate('areas')
-      .exec()
-      .then((city) => {
-        if (city) {
-          return city;
-        }
-        const err = new APIError(
-          'No such city exists!',
-          httpStatus.NOT_FOUND,
-          true
-        );
-        return Promise.reject(err);
-      });
+  // Find a city by its slug(tehran, shiraz)
+  getBySlug(slug) {
+    return this.list({
+      filter: {
+        slug,
+      },
+    });
   },
+  // Find a city by its _id
+  get(id) {
+    return this.list({
+      filter: {
+        _id: id,
+      },
+    });
+  },
+  // register a new covered area in a city
   registerArea(newArea) {
     return this.findOneAndUpdate(
       { _id: newArea.city },
@@ -64,14 +47,15 @@ CitySchema.statics = {
     );
   },
   // returns a list of all cities
-  list() {
-    return this.find()
+  async list({ filter = {} } = {}) {
+    const result = await this.find(filter)
       .populate({
         path: 'areas',
         select: 'area',
       })
       .select('city slug')
       .exec();
+    return result;
   },
 };
 

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const compress = require('compression');
 const httpStatus = require('http-status');
+const expressValidation = require('express-validation');
 const cors = require('cors');
 const routes = require('./routes');
 const config = require('./config');
@@ -28,6 +29,23 @@ app.use(cors());
 // mount all routes on /api path
 app.use('/api', routes);
 
+// if error is not an instanceOf APIError, convert it.
+app.use((err, req, res, next) => {
+  if (err instanceof expressValidation.ValidationError) {
+    // validation error contains errors which is an array of error each containing message[]
+    const unifiedErrorMessage = err.errors.map(
+      error => error.messages.join('. ')
+    ).join(' and ');
+    const error = new APIError(unifiedErrorMessage, err.status, true);
+    return next(error);
+  }
+  if (!(err instanceof APIError)) {
+    const apiError = new APIError(err.message, err.status, err.name === 'UnauthorizedError' ? true : err.isPublic);
+    return next(apiError);
+  }
+  return next(err);
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new APIError('API Not Found', httpStatus.NOT_FOUND, true);
@@ -38,7 +56,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => // eslint-disable-line no-unused-vars
   res.status(err.status).json({ // eslint-disable-line implicit-arrow-linebreak
     message: err.isPublic ? err.message : httpStatus[err.status],
-    stack: config.env === 'development' ? err.stack : {},
+    // stack: config.env === 'development' ? err.stack : {},
   }));
 
 module.exports = app;

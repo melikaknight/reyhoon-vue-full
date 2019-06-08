@@ -1,6 +1,5 @@
 const Promise = require('bluebird');
 const mongoose = require('mongoose');
-// const _ = require('lodash');
 const httpStatus = require('http-status');
 const APIError = require('../../helpers/APIError');
 /**
@@ -15,11 +14,6 @@ const AddressSchema = new mongoose.Schema({
     type: String,
   },
 }, { timestamps: true });
-
-/**
- * Methods
- */
-AddressSchema.method({});
 
 /**
  * Statics

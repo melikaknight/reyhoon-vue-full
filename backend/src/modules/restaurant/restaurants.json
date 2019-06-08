@@ -6,10 +6,8 @@
     "area": "saadat-abad",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/langine_4867_1538558144.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "fast-food",
     "openingTime": "19:00",
-    "closingTime": "23:30",
-    "averageRating": "4.2"
+    "closingTime": "23:30"
   },
   {
     "name": "بیژن",
@@ -18,10 +16,8 @@
     "area": "saadat-abad",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bijan-fasfood_464_1520945292.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "irani",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "3.8"
+    "closingTime": "16:30"
   },
   {
     "name": "لیدوما",
@@ -30,10 +26,8 @@
     "area": "elahiye",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/lidoma_3137_1520945331.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "fast-food",
     "openingTime": "19:30",
-    "closingTime": "22:30",
-    "averageRating": "3.2"
+    "closingTime": "22:30"
   },
   {
     "name": "باماهاس",
@@ -41,10 +35,8 @@
     "address": "بالاتر از میدان باهنر، محله نیاوران، میدان نیاوران",
     "area": "farmaniye",
     "logo_url": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bamahas_1400_1520945270.jpeg",
-    "category": "pizza",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "3.4"
+    "closingTime": "16:30"
   },
   {
     "name": "چاپ چاپ",
@@ -53,10 +45,8 @@
     "area": "farmaniye",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/chop-chop_1505_1542013057.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "irani",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "2.2"
+    "closingTime": "16:30"
   },
   {
     "name": "فست فود شن",
@@ -65,10 +55,8 @@
     "area": "farhang-shahr",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/shen-fastfood_2191_1520945287.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "fast-food",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "4.8"
+    "closingTime": "16:30"
   },
   {
     "name": "طوبی",
@@ -77,10 +65,8 @@
     "area": "farhang-shahr",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/tooba-catering_2210_1520945289.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "sandwich",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "3.2"
+    "closingTime": "16:30"
   },
   {
     "name": "برنتین",
@@ -89,10 +75,8 @@
     "area": "satar-khan",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/brentine_7061_1552741601.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "irani",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "3.2"
+    "closingTime": "16:30"
   },
   {
     "name": "صوفی",
@@ -101,9 +85,7 @@
     "area": "satar-khan",
     "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/soofi-restaurant_2320_1520945292.jpeg",
     "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
-    "category": "irani",
     "openingTime": "13:00",
-    "closingTime": "16:30",
-    "averageRating": "4.5"
+    "closingTime": "16:30"
   }
 ]

@@ -1,8 +1,4 @@
-const Promise = require('bluebird');
 const mongoose = require('mongoose');
-// const _ = require('lodash');
-const httpStatus = require('http-status');
-const APIError = require('../../helpers/APIError');
 /**
  * Area Schema
  */
@@ -41,22 +37,21 @@ AreaSchema.method({});
  */
 AreaSchema.statics = {
 
-  // returns a list of restaurants within a certain area
+  // Find an area by its slug(saadat-abad, farmaniye)
+  getBySlug(slug) {
+    return this.list({
+      filter: {
+        slug,
+      },
+    });
+  },
+  // Find an area by its _id(5cf93e8a41a53d590fbed846)
   get(id) {
-    return this.findById(id)
-      .populate('city', ['city', 'slug'])
-      .exec()
-      .then((address) => {
-        if (address) {
-          return address;
-        }
-        const err = new APIError(
-          'No such restaurant address exists!',
-          httpStatus.NOT_FOUND,
-          true
-        );
-        return Promise.reject(err);
-      });
+    return this.list({
+      filter: {
+        _id: id,
+      },
+    });
   },
   registerRestaurant(newRestaurant) {
     return this.findOneAndUpdate(
@@ -69,15 +64,15 @@ AreaSchema.statics = {
     );
   },
   // returns a list of all areas
-  list() {
-    return this.find()
+  async list({ filter = {} } = {}) {
+    const result = await this.find(filter)
       .populate({
         path: 'city',
         select: 'city slug',
       })
       .populate({
         path: 'restaurants',
-        select: '-categories -menu -comments -updatedAt -createdAt -__v',
+        select: '-menu -comments -updatedAt -createdAt -__v',
         populate: {
           path: 'address',
           select: 'address',
@@ -85,6 +80,7 @@ AreaSchema.statics = {
       })
       .select('area slug')
       .exec();
+    return result;
   },
 };
 

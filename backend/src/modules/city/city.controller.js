@@ -2,8 +2,8 @@
 const City = require('./city.model');
 
 function get(req, res) {
-  const { cityId } = req.params;
-  City.get(cityId)
+  const { citySlug } = req.params;
+  City.getBySlug(citySlug)
     .then(areas => res.json(areas));
 }
 

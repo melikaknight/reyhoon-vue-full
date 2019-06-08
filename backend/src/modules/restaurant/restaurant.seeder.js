@@ -5,13 +5,8 @@ const Area = require('../area/area.model');
 const Address = require('../address/address.model');
 
 const registerRestaurant = async ({ newAddress, newRestaurant }) => {
-  // await Restaurant.registerRestaurant(newRestaurant);
-  // console.log('#####################');
-  // console.log(newRestaurant);
   await Area.registerRestaurant(newRestaurant);
   await newAddress.save();
-  // eslint-disable-next-line no-param-reassign
-  // newRestaurant.areaId = undefined;
   return newRestaurant.save();
 };
 const restaurantSeeder = async () => {
@@ -30,26 +25,18 @@ const restaurantSeeder = async () => {
         slug,
         logo,
         coverImage,
-        averageRating,
         openingTime,
         closingTime,
       } = restaurant;
-      // console.log('#####################');
-      // console.log(areaId);
       const newRestaurant = new Restaurant({
         address: newAddress,
-        // test: areaId,
         name,
         slug,
         logo,
         coverImage,
-        averageRating,
         openingTime,
         closingTime,
       });
-      // console.log('#####################');
-      // console.log(areaId);
-      // console.log(newRestaurant);
       return registerRestaurant({
         newAddress,
         newRestaurant,

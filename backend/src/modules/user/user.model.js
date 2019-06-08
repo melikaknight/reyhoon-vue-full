@@ -1,8 +1,4 @@
-const Promise = require('bluebird');
 const mongoose = require('mongoose');
-// const _ = require('lodash');
-const httpStatus = require('http-status');
-const APIError = require('../../helpers/APIError');
 /**
  * User Schema
  */
@@ -34,31 +30,26 @@ const UserSchema = new mongoose.Schema({
 */
 
 /**
- * Methods
- */
-UserSchema.method({});
-
-/**
  * Statics
  */
 UserSchema.statics = {
-
+  // find and return a user model by its _id like: 5cfa8d1b52172f1eff31b1f3
   get(id) {
-    return this.findById(id)
-      .populate('comments')
-      .exec()
-      .then((user) => {
-        if (user) {
-          return user;
-        }
-        const err = new APIError(
-          'No such user exists!',
-          httpStatus.NOT_FOUND,
-          true
-        );
-        return Promise.reject(err);
-      });
+    return this.list({
+      filter: {
+        _id: id,
+      },
+    });
   },
+  // find and return a user model by its username like: arsalan
+  getByUsername(username) {
+    return this.list({
+      filter: {
+        username,
+      },
+    });
+  },
+  // add a new comment to the user comments collection
   registerComment(newComment) {
     return this.findOneAndUpdate(
       { _id: newComment.author },
@@ -70,18 +61,17 @@ UserSchema.statics = {
     );
   },
   // https://mongoosejs.com/docs/populate.html
-  list() {
-    return this.find()
+  // get a list of users based on the filter object
+  // if no filter is passed, the function returns all the users
+  async list({ filter = {} } = {}) {
+    const result = await this.find(filter)
       .populate({
         path: 'comments',
-        select: 'quality packaging deliveryTime comment',
-        populate: {
-          path: 'restaurant',
-          select: 'name',
-        },
+        select: 'quality packaging deliveryTime average comment',
       })
       .select('fullname username')
       .exec();
+    return result;
   },
 };
 

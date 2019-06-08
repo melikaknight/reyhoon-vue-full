@@ -1,4 +1,3 @@
-// const mongoose = require('mongoose');
 const isCollectionEmpty = require('../helpers/checkEmptyCollection');
 const userSeeder = require('../modules/user/user.seeder');
 const citySeeder = require('../modules/city/city.seeder');
@@ -8,6 +7,8 @@ const restaurantSeeder = require('../modules/restaurant/restaurant.seeder');
 const foodSeeder = require('../modules/food/food.seeder');
 const commentSeeder = require('../modules/comment/comment.seeder');
 
+// this function checks every collection in our database and seeds them
+// if the collection is empty
 const dbSeeder = async () => {
   if (await isCollectionEmpty('users')) {
     await userSeeder();
