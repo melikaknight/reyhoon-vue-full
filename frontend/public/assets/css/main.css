@@ -1,0 +1,348 @@
+/*---------------------------------------------------
+        Guide
+-----------------------------------------------------*/
+.guide {
+  background-color: #fafafa;
+  color: #777;
+}
+.guide h4 {
+  font-size: 20px;
+}
+
+.guide-box {
+  background-color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 35px 25px;
+}
+.guide-box .guide-box-img {
+  float: right;
+  position: relative;
+  text-align: center;
+}
+.guide-box .guide-box-img img {
+  border-radius: 65px;
+  height: 65px;
+  width: 65px;
+}
+.guide-box .guide-box-img i {
+  background-image: linear-gradient(to top right, #ff0614, #8c00af);
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  left: 40%;
+  padding-top: 8px;
+  position: absolute;
+  top: 60%;
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+}
+.guide-box .guide-box-desc {
+  font-size: 14px;
+  margin-right: 90px;
+}
+
+/*---------------------------------------------------
+        Restaurants of the month
+-----------------------------------------------------*/
+.best-restaurants {
+  background-color: #fafafa;
+}
+
+.best-restaurants-box {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #cbcbcb;
+  padding: 25px 15px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.best-restaurants-box .best-restaurants-img img {
+  box-shadow: 0 3px 9px #cbcbcb;
+  border-radius: 4px;
+  max-width: 100px;
+}
+.best-restaurants-box h3 {
+  color: #000;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.best-restaurants-box .best-restaurants-rating {
+  font-family:
+  font-size: 14px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.best-restaurants-box .best-restaurants-rating:after {
+  background-color: #d9d9d9;
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  width: 35px;
+}
+.best-restaurants-box .best-restaurants-rating:before {
+  background-color: #d9d9d9;
+  content: "";
+  height: 1px;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 35px;
+}
+.best-restaurants-box .best-restaurants-rating span {
+  display: inline-block;
+  font-family: "Open Sans";
+  padding: 0 5px;
+}
+.best-restaurants-box .best-restaurants-rating span:first-child {
+  color: #ffc300;
+}
+.best-restaurants-box .best-restaurants-rating span:last-child {
+  color: #777;
+}
+.best-restaurants-box .best-restaurants-services {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.best-restaurants-box .best-restaurants-services span {
+  color: #444;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+.best-restaurants-box .best-restaurants-services span:not(:last-child):after {
+  background-color: #444;
+  content: "";
+  left: -6px;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  height: 6px;
+  width: 6px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+.best-restaurants-box p {
+  overflow-x: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+.best-restaurants-box p:after {
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+  content: '';
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+.best-restaurants-box button {
+  background-color: #fff;
+  border: 1px solid #c40073;
+  border-radius: 35px;
+  color: #c40073;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Shabnam;
+  outline: none;
+  padding: 5px 25px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+.best-restaurants-box:hover {
+  box-shadow: 0 3px 15px #cbcbcb;
+}
+.best-restaurants-box:hover button {
+  background-color: #fdf2f7;
+}
+/*---------- star rating ----------*/
+.star-rating {
+  display: inline-block;
+  align-items: center;
+  font-size: 16px;
+  justify-content: center;
+}
+.back-stars {
+  display: flex;
+  color: #777;
+  position: relative;
+}
+.front-stars {
+  display: flex;
+  color: #ffc300;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/*---------------------------------------------------
+        Tehran Restaurants
+-----------------------------------------------------*/
+.tehran-restaurants {
+  background-image: url("images/tehran_restaurants_bg.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tehran-restaurants .col-25 {
+  width: 25%;
+}
+
+.tehran-restaurants-boxes {
+  width: 50%;
+}
+
+.tehran-restaurants-box .tehran-restaurant-img img {
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 82px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+.tehran-restaurants-box .tehran-restaurant-img img.mj-round {
+  border-radius: 3px;
+}
+.tehran-restaurants-box span {
+  color: #4a4a4a;
+  font-size: 15px;
+}
+.tehran-restaurants-box:hover .tehran-restaurant-img img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*---------------------------------------------------
+        What Food
+-----------------------------------------------------*/
+.what-food {
+  background-color: #f6f9fc;
+}
+.what-food .col-25 {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 25%;
+}
+
+.what-food-box {
+  border-radius: 3px;
+  color: #fff;
+  direction: ltr;
+  height: 295px;
+  overflow: hidden;
+  position: relative;
+}
+.what-food-box:after {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.what-food-box img {
+  max-width: initial;
+  max-height: 100%;
+}
+.what-food-box .food-desc {
+  bottom: 15px;
+  direction: rtl;
+  position: absolute;
+  right: 15px;
+  z-index: 3;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+.what-food-box .food-desc h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.what-food-box .food-desc h4 {
+  margin: 0;
+  font-weight: normal;
+}
+.what-food-box:hover .food-desc {
+  bottom: 20px;
+}
+
+/*---------------------------------------------------
+        Reyhoon App
+-----------------------------------------------------*/
+.reyhoon-app {
+  background-color: #f6f9fc;
+  padding-bottom: 100px;
+  padding-top: 300px;
+}
+.reyhoon-app .reyhoon-app-box {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 24px 0 #eff2f6;
+  padding: 35px;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form {
+  position: relative;
+  width: 60%;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form:after {
+  content: url("images/app_bg.png");
+  position: absolute;
+  right: 120%;
+  bottom: -180px;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form h2 {
+  margin-top: 0;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form .main-subtitle {
+  font-size: 20px;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form form {
+  position: relative;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form form input {
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 60px;
+  box-shadow: 0 0.5rem 1.4rem 0 #eff2f6, inset 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.14);
+  font-family: 'Open Sans';
+  font-size: 18px;
+  height: 60px;
+  padding-right: 25px;
+  width: 100%;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form form input:focus {
+  border-color: #8c00af;
+  outline: none;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form form button {
+  background-image: linear-gradient(to right, #ff0614, #8c00af);
+  border: none;
+  border-radius: 60px 0 0 60px;
+  color: #fff;
+  cursor: pointer;
+  font-family: Shabnam;
+  font-size: 16px;
+  height: 60px;
+  outline: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form .app-links a {
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  overflow: hidden;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+.reyhoon-app .reyhoon-app-box .reyhoon-app-form .app-links a:hover {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+}
