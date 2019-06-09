@@ -52,9 +52,6 @@
 </template>
 
 <script>
-  import Row from '@/components/elements/Row.vue';
-  import Column from '@/components/elements/Column.vue';
-  import Icon from '@/components/elements/Icon.vue';
   import FooterLinks from './FooterLinks.vue';
   import footerContent from './footerContent.json';
   export default {
@@ -66,9 +63,6 @@
       msg: String
     },
     components: {
-      Row,
-      Column,
-      Icon,
       FooterLinks,
     }
   }
