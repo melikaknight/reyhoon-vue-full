@@ -1,0 +1,248 @@
+/*------------------------------------------------------------------------------
+        Responsive
+------------------------------------------------------------------------------*/
+@media screen and (max-width: 992px) {
+  .mj-nav, .container, .footer .footer-b {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .header {
+	background-image: none;
+  }
+
+  .header .search-state-form {
+    width: 650px;
+  }
+
+  .tehran-restaurants h3 {
+    text-align: center;
+  }
+
+  .tehran-restaurants-boxes {
+    width: 100%;
+  }
+
+  .reyhoon-app {
+    padding-top: 100px;
+  }
+  .reyhoon-app .reyhoon-app-box .reyhoon-app-form {
+    width: 100%;
+  }
+  .reyhoon-app .reyhoon-app-box .reyhoon-app-form:after {
+    display: none;
+  }
+
+  .footer .footer-a .col-33 {
+    width: 100%;
+  }
+  .footer .footer-a .col-66 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 28px;
+  }
+
+  .main-subtitle {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .mj-nav, .container, .footer .footer-b {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mj-nav ul li:not(:last-child) {
+    margin-left: 20px;
+  }
+
+  .header .search-state-form {
+    width: 100%;
+  }
+
+  .guide .col-33 {
+    width: 50%;
+  }
+
+  .best-restaurants .col-33 {
+    width: 50%;
+  }
+
+  .what-food .col-25 {
+    width: 50%;
+  }
+
+  .reyhoon-app .reyhoon-app-box {
+    padding: 15px;
+  }
+  .reyhoon-app .reyhoon-app-box .reyhoon-app-form form button {
+    width: 200px;
+  }
+
+  .footer .footer-a .col-66 .col-25 {
+    width: 50%;
+  }
+
+  .login-register-header .logo a {
+    max-width: 90px;
+  }
+  .login-register-header .links a {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .login-register-form {
+    background-color: #eee;
+  }
+  .login-register-form h6 {
+    margin-bottom: 10px;
+  }
+  .login-register-form form {
+    width: 100%;
+  }
+  .login-register-form form .col-50 {
+    width: 100%;
+  }
+  .login-register-form form .input-box i {
+    color: #9e9e9e;
+    font-size: 14px;
+  }
+  .login-register-form form input {
+    font-size: 14px;
+    font-family: Shabnam;
+    height: 35px;
+    padding-right: 30px;
+  }
+  .login-register-form form a {
+    font-size: 12px;
+  }
+  .login-register-form form button[type=submit] {
+    border-radius: 35px;
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .login-register-social-links {
+    padding: 15px;
+  }
+  .login-register-social-links a:not(:last-child) {
+    margin-left: 15px;
+  }
+
+  .login-register-footer {
+    padding: 15px;
+  }
+  .login-register-footer a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-title {
+    font-size: 22px;
+  }
+
+  .main-subtitle {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .food-tags {
+    border-radius: 30px;
+    font-size: 16px;
+  }
+
+  .header .search-state-form .row > div.col-20 {
+    width: 30%;
+  }
+  .header .search-state-form .row > div.col-20 select {
+	padding-left: 20%;
+  }
+  .header .search-state-form .row > div.col-20:before {
+    font-size: 22px;
+    padding: 0;
+    right: 20px;
+    top: 9px;
+  }
+  .header .search-state-form .row > div.col-80 {
+    width: 70%;
+  }
+  .header .search-state-form .row > div.col-80 button {
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+  }
+  .header .search-state-form .row > div.col-80:before {
+    font-size: 22px;
+    right: 15px;
+    top: 9px;
+  }
+  .header .search-state-form input {
+    font-size: 15px;
+    height: 40px;
+    padding-right: 35px;
+  }
+  .header .search-state-form select {
+    font-size: 15px;
+    height: 40px;
+    padding-right: 5px;
+  }
+
+  .guide .col-33 {
+    width: 100%;
+  }
+
+  .best-restaurants .col-33 {
+    width: 100%;
+  }
+
+  .tehran-restaurants .col-25 {
+    width: 33.33%;
+  }
+
+  .what-food .col-25 {
+    width: 100%;
+  }
+
+  .reyhoon-app {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .reyhoon-app .reyhoon-app-box .reyhoon-app-form form button {
+    font-size: 14px;
+    width: 100px;
+  }
+  .reyhoon-app .reyhoon-app-box .reyhoon-app-form .app-links a img {
+    max-width: 130px;
+  }
+
+  .footer-b {
+    text-align: center !important;
+  }
+  .footer-b p {
+    font-size: 12px;
+    float: none;
+    padding-top: 0;
+    width: 100%;
+  }
+  .footer-b .social-links {
+    float: none;
+    width: 100%;
+  }
+  .footer-b .social-links a {
+    color: #9b9b9b;
+    font-size: 22px;
+  }
+  .footer-b .social-links a:not(:last-child) {
+    margin-right: 15px;
+  }
+}

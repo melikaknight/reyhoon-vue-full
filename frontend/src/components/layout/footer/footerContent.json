@@ -1,0 +1,92 @@
+{
+  "level1": {
+    "footerRight": {
+      "about": "مراقبت و محافظت از حساب کاربری و رمزعبور هر کاربر بر عهده کاربر است. ریحون سریعترین راه سفارش آنلاین غذا است. منوی عکس‌دار رستوران‌های اطرافتان را بر اساس مکان خود به راحتی مشاهده کنید و سفارش دهید.",
+      "linkText": "لیست رستوران ها",
+      "linkPath": "/restaurants"
+    },
+    "footerLeft": [
+      {
+        "headerText": "تماس با ریحون",
+        "headerBorderColor": "purple",
+        "linksType": "text",
+        "links": [
+          {
+            "linkText": "درباره ریحون",
+            "linkPath": "#"
+          },
+          {
+            "linkText": "تماس با ما",
+            "linkPath": "#"
+          },
+          {
+            "linkText": "وبلاگ ریحون",
+            "linkPath": "#"
+          }
+        ]
+      },
+      {
+        "headerText": "رستوران ها",
+        "headerBorderColor": "pink",
+        "linksType": "text",
+        "links": [
+          {
+            "linkText": "ثبت رستوران",
+            "linkPath": "#"
+          }
+        ]
+      },
+      {
+        "headerText": "پشتیبانی ریحون",
+        "headerBorderColor": "red",
+        "linksType": "text",
+        "links": [
+          {
+            "linkText": "سوالات متداول",
+            "linkPath": "#"
+          },
+          {
+            "linkText": "تماس با پشتیبانی",
+            "linkPath": "#"
+          },
+          {
+            "linkText": "قوانین و مقررات",
+            "linkPath": "#"
+          }
+        ]
+      },
+      {
+        "headerText": "اپلیکیشن های موبایل",
+        "headerBorderColor": "purple",
+        "linksType": "image",
+        "links": [
+          {
+            "linkImage": "/assets/images/googleplay_dark.png",
+            "imageAlt": "Google Play Dark Button",
+            "linkPath": "#"
+          },
+          {
+            "linkImage": "/assets/images/sibapp_dark.png",
+            "imageAlt": "Sib App Dark Button",
+            "linkPath": "#"
+          },
+          {
+            "linkImage": "/assets/images/cafebazaar_dark.png",
+            "imageAlt": "Cafe Bazaar Dark Button",
+            "linkPath": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "level3": {
+    "socialIcons": [ 
+      "google-plus",
+      "instagram",
+      "twitter",
+      "facebook",
+      "send "
+    ],
+    "copyRightText": "&copy; 2017, Reyhoon, All rights reserved."
+  }
+}

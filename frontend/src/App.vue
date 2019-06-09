@@ -7,6 +7,7 @@
     <router-link to="/contact">contact</router-link>
     <router-link to="/about">about</router-link>
     <router-view></router-view>
+    <my-footer />
   </div>
 </template>
 
@@ -14,11 +15,13 @@
   import { mapState } from 'vuex';
 
   import HelloWorld from './components/HelloWorld.vue';
+  import Footer from '@/components/layout/footer/Footer.vue';
   
   export default {
     name: 'app',
     components: {
-      HelloWorld
+      HelloWorld,
+      'my-footer': Footer,
     },
     // mapState helper generates computed getter functions for us
     computed: mapState([
@@ -29,7 +32,6 @@
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
