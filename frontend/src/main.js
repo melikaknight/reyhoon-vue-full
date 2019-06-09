@@ -7,11 +7,16 @@ import router from './router';
 // importing our global store object
 import store from './store';
 
+// importing our global components defenition
+import '@/components/globalComponents';
+
 // importing our parent component to all other children
 import App from './App.vue';
 
 // setting vue configs
 Vue.config.productionTip = false;
+
+// Vue.component(globalComponents);
 
 new Vue({
   // Hooking up our router
@@ -21,5 +26,6 @@ new Vue({
   // this will inject the store instance to all child components
   // and can be accessed with this.$store
   store,
+  // Automatic Global Registration of Base Components
   render: h => h(App),
 }).$mount('#app');
