@@ -10,6 +10,9 @@ import store from './store';
 // importing our global components defenition
 import '@/components/globalComponents';
 
+// importing our toast message handler
+import '@/services/toastHandler';
+
 // importing our parent component to all other children
 import App from './App.vue';
 

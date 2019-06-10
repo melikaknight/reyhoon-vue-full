@@ -9,8 +9,11 @@
   fields, and the recorded mutation will also be more descriptive
 */
 const mutations = {
-  SET_APP_NAME(state, payload) {
-    state.appName = payload.appName;
+  SET_ERROR(state, { error }) {
+    state.errorMessage = error;
+  },
+  SET_CITIES(state, { cities }) {
+    state.cities = cities;
   },
 };
 

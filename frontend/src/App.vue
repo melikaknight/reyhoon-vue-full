@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex';
+  import { mapState, mapGetters } from 'vuex';
 
   import TopNav from '@/components/layout/top-nav/TopNav.vue';
   import Header from '@/components/layout/header/Header.vue';
@@ -15,14 +15,41 @@
   
   export default {
     name: 'app',
+    created: function(){
+      this.$store.dispatch('getCities');
+    },
     components: {
       TopNav,
       'my-header': Header,
       'my-footer': Footer,
     },
     // mapState helper generates computed getter functions for us
-    computed: mapState([
-      'appName'
-    ]),
+    computed: {
+      ...mapGetters({
+        errorMessage: 'errorMessageGetter',
+        cities: 'citiesGetter',
+        cityBySlugGetter: 'cityBySlugGetter',
+      }),
+      ...mapState([
+        'appName',
+      ])
+    },
+    watch: {
+      errorMessage: function(newValue){
+        if (newValue) {
+          this.renderToastError();
+        }
+      }
+    },
+    methods: {
+      renderToastError: function(){
+        this.$toasted.show(this.errorMessage, {
+          onComplete: () => this.clearError(),
+        });
+      },
+      clearError: function(){
+        this.$store.commit('SET_ERROR', { error: "" });
+      }
+    }
   };
 </script>
