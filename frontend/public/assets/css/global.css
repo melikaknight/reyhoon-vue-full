@@ -418,3 +418,7 @@ p {
 .footer .footer-b .social-links a:not(:last-child) {
   margin-right: 15px;
 }
+
+.dir-ltr {
+  direction: ltr;
+}
