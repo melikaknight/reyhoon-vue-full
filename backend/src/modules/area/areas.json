@@ -20,6 +20,16 @@
     "city": "تهران"
   },
   {
+    "area": "میدان آزادی",
+    "slug": "azadi-square",
+    "city": "تهران"
+  },
+  {
+    "area": "میدان معلم",
+    "slug": "moalem-square",
+    "city": "تهران"
+  },
+  {
     "area": "فرهنگ شهر",
     "slug": "farhang-shahr",
     "city": "شیراز"
@@ -32,6 +42,11 @@
   {
     "area": "ستارخان",
     "slug": "satar-khan",
+    "city": "شیراز"
+  },
+  {
+    "area": "ستاره",
+    "slug": "setare",
     "city": "شیراز"
   }
 ]

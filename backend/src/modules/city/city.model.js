@@ -51,7 +51,7 @@ CitySchema.statics = {
     const result = await this.find(filter)
       .populate({
         path: 'areas',
-        select: 'area',
+        select: 'area slug',
       })
       .select('city slug')
       .exec();

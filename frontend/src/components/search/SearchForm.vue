@@ -1,31 +1,162 @@
 <template>
   <div class="search-state-form mb-5">
     <form>
-      <div class="row">
-        <div class="col-20">
-          <select>
-            <option value="tehran" selected>تهران</option>
-            <option value="qom">قم</option>
-            <option value="isfahan">اصفهان</option>
+      <row>
+        <column width="20">
+          <select v-model="selectedCity">
+            <option disabled value="">
+              {{citiesCount}}
+            </option>
+            <option 
+              v-for="(option, index) in cityOptions" 
+              :value="option.value"
+              :key="index"
+            >
+              {{ option.text }}
+            </option>
           </select>
-        </div>
-        <div class="col-80">
-          <input type="text" name="s" placeholder="مثلا نیاوران">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-      </div>
+        </column>
+        <column width="80">
+          <v-autocomplete 
+            :items="searchInput.items" 
+            v-model="selectedArea" 
+            :component-item='searchInput.template' 
+            :input-attrs="searchInput.attributes"
+            :get-label='getLabel'
+            :min-len='0'
+            @item-selected="itemSelected"
+            @update-items='update'
+          />
+          <button 
+            type="submit" 
+            @click.prevent="filterCityAreas(searchInput.searchTerm)"
+          >
+            <i class="fa fa-search"></i>
+          </button>
+        </column>
+      </row>
     </form>
-    <div class="last-search">
-      <i class="fa fa-clock-o"></i> آخرین جستجو: تهران، شیخ هادی، چهارراه ولیعصر
+    <div class="last-search" v-show="searchHistoryShow">
+      <i class="fa fa-clock-o"></i>
+      {{ lastSearchText }}
     </div>
   </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
+  import SearchSuggestionTemplate from './SearchSuggestion.vue';
   export default {
     name: "SearchForm",
+    created(){
+      this.filterCityAreas();
+    },
+    data: () => ({
+      selectedCity: "tehran",
+      selectedArea: null,
+      searchHistory: [],
+      searchInput: {
+        items: [],
+        searchTerm: "",
+        attributes: {
+          placeholder: "مثلا سعادت آباد",
+        },
+        template: SearchSuggestionTemplate,
+      },
+      
+    }),
     components: {
-
+    },
+    watch: {
+      'searchInput.searchTerm': function(newValue){
+        this.filterCityAreas(newValue);
+      },
+      selectedCity(newValue){
+        this.selectedArea = null;
+        this.filterCityAreas();
+      },
+      cityAreas(newValue){
+        this.filterCityAreas();
+      }
+    },
+    computed: {
+      ...mapGetters({
+        cities: 'citiesGetter',
+        cityBySlugGetter: 'cityBySlugGetter',
+      }),
+      defaultSelectedCity(){
+        return (this.cities.length)
+          ? this.cities[0].name
+          : "";
+      },
+      cityOptions() {
+        return this.cities.map(({city, slug}) => ({
+          text: city,
+          value: slug,
+        }));
+      },
+      citiesCount(){
+        return `(${this.cityOptions.length}) شهر تحت پوشش`;
+      },
+      cityAreas(){
+        const selectedCity = this.cityBySlugGetter(this.selectedCity);
+        if (selectedCity) {
+          const {
+          areas
+        } = selectedCity;
+        return areas;
+        }
+        return [];
+      },
+      searchHistoryShow(){
+        return (this.searchHistory.length === 2)? true : false;
+      },
+      lastSearchText(){
+        return (this.searchHistoryShow)
+          ? `آخرین جستجو: ${this.searchHistory[0].city}, ${this.searchHistory[0].area}`
+          : '';
+      }
+    },
+    methods: {
+      getLabel (area) {
+        if (area) {
+          return area.area
+        }
+        return '';
+      },
+      filterCityAreas(areaFilter){
+        if (this.cityAreas) {
+          if (this.cityAreas.length && areaFilter) {
+            const filteredCityAreas = 
+              this.cityAreas.filter(
+                area => (new RegExp(areaFilter.toLowerCase())).test(area.area.toLowerCase())
+              );
+            if (filteredCityAreas.length === 0) {
+              this.$store.commit('SET_ERROR', {
+                error: 'نیجه ای پیدا نشد',
+              });
+            }
+            this.searchInput.items = filteredCityAreas;
+          }else{
+            this.searchInput.items = this.cityAreas;
+          }
+        }
+      },
+      update (searchTerm) {
+        this.searchInput.searchTerm = searchTerm;
+      },
+      itemSelected({area}){
+        this.searchHistory.push({
+            city: this.cityOptions.find(
+              ({value}) => value === this.selectedCity
+            ).text,
+            area,
+          },
+        );
+        if (this.searchHistory.length >= 3) {
+          this.searchHistory.shift();
+        }
+      }
     }
   }
 </script>

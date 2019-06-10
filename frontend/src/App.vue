@@ -27,8 +27,6 @@
     computed: {
       ...mapGetters({
         errorMessage: 'errorMessageGetter',
-        cities: 'citiesGetter',
-        cityBySlugGetter: 'cityBySlugGetter',
       }),
       ...mapState([
         'appName',
