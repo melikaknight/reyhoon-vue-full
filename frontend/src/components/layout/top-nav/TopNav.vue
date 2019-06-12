@@ -7,15 +7,37 @@
         <router-link to="/register">عضویت</router-link>
       </li>
       <li>
-        <router-link to="/help">راهنما</router-link>
+        <a href="#">توسعه توسط: {{ appAuthor }}</a>
+      </li>
+      <li class="logo-container">
+        <router-link to="/">
+          <logo-wide />
+        </router-link>
       </li>
     </ul>
   </nav>
   <!-- /Top Navigation -->
 </template>
 <script>
+  import LogoWide from '@/components/logo/LogoWide.vue';
+  import { mapState } from 'vuex';
   export default {
-    name: "TopNav"
+    name: "TopNav",
+    components: {
+      LogoWide,
+    },
+    computed: {
+      ...mapState([
+        'appAuthor',
+      ])
+    },
   }
 </script>
+
+<style scoped>
+  .logo-container {
+    margin-right: auto;
+  }
+</style>
+
 

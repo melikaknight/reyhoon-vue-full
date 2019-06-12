@@ -41,7 +41,7 @@ CommentSchema.virtual('rating').get(function () {
     packaging,
     deliveryTime,
   } = this;
-  return parseFloat((quality + packaging + deliveryTime) / 3).toFixed(1);
+  return parseFloat(((quality + packaging + deliveryTime) / 3).toFixed(1));
 });
 /**
   Database logic should be encapsulated within the data model. Mongoose provides

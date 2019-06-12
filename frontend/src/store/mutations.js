@@ -15,6 +15,12 @@ const mutations = {
   SET_CITIES(state, { cities }) {
     state.cities = cities;
   },
+  SET_SELECTED_CITY(state, { selectedCity }){
+    state.selectedCity = selectedCity;
+  },
+  SET_CITY_RESTAURANTS(state, { cityRestaurants }) {
+    state.cityRestaurants = cityRestaurants;
+  }
 };
 
 export default mutations;

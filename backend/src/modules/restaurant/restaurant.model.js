@@ -65,7 +65,7 @@ RestaurantSchema.virtual('averageRating').get(function () {
       totalAverageRating, { rating }
     ) => totalAverageRating + parseFloat(rating);
     return (
-      parseFloat(this.comments.reduce(averageRatingReducer, 0) / this.comments.length).toFixed(1)
+      parseFloat((this.comments.reduce(averageRatingReducer, 0) / this.comments.length).toFixed(1))
     );
   }
   return 0;

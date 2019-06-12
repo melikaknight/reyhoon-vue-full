@@ -4,6 +4,10 @@
 .guide {
   background-color: #fafafa;
   color: #777;
+  padding: 50px 0;
+}
+.guide .row {
+  margin-top: -100px;
 }
 .guide h4 {
   font-size: 20px;
@@ -14,33 +18,23 @@
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 35px 25px;
-}
-.guide-box .guide-box-img {
-  float: right;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-}
-.guide-box .guide-box-img img {
-  border-radius: 65px;
-  height: 65px;
-  width: 65px;
+  border-radius: 10px;
 }
 .guide-box .guide-box-img i {
   background-image: linear-gradient(to top right, #ff0614, #8c00af);
   border: 2px solid #fff;
   color: #fff;
-  font-size: 20px;
-  left: 40%;
+  font-size: 38px;
   padding-top: 8px;
-  position: absolute;
-  top: 60%;
-  border-radius: 40px;
-  height: 40px;
-  width: 40px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
 .guide-box .guide-box-desc {
   font-size: 14px;
-  margin-right: 90px;
 }
 
 /*---------------------------------------------------
@@ -69,13 +63,12 @@
   white-space: nowrap;
 }
 .best-restaurants-box .best-restaurants-rating {
-  font-family:
   font-size: 14px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
-.best-restaurants-box .best-restaurants-rating:after {
+/* .best-restaurants-box .best-restaurants-rating:after {
   background-color: #d9d9d9;
   content: "";
   height: 1px;
@@ -92,11 +85,10 @@
   left: 10%;
   top: 50%;
   width: 35px;
-}
+} */
 .best-restaurants-box .best-restaurants-rating span {
   display: inline-block;
   font-family: "Open Sans";
-  padding: 0 5px;
 }
 .best-restaurants-box .best-restaurants-rating span:first-child {
   color: #ffc300;
@@ -185,34 +177,35 @@
 /*---------------------------------------------------
         Tehran Restaurants
 -----------------------------------------------------*/
-.tehran-restaurants {
-  background-image: url("images/tehran_restaurants_bg.jpg");
+.top-restaurants {
+  background-image: url("../images/top_restaurants_bg.jpg");
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.tehran-restaurants .col-25 {
+.top-restaurants .col-25 {
   width: 25%;
 }
 
-.tehran-restaurants-boxes {
+.top-restaurants-boxes {
   width: 50%;
 }
 
-.tehran-restaurants-box .tehran-restaurant-img img {
+.top-restaurants-box .top-restaurant-img img {
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
   max-width: 82px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
+  border-radius: 5px;
 }
-.tehran-restaurants-box .tehran-restaurant-img img.mj-round {
+.top-restaurants-box .top-restaurant-img img.mj-round {
   border-radius: 3px;
 }
-.tehran-restaurants-box span {
+.top-restaurants-box span {
   color: #4a4a4a;
   font-size: 15px;
 }
-.tehran-restaurants-box:hover .tehran-restaurant-img img {
+.top-restaurants-box:hover .top-restaurant-img img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -277,7 +270,7 @@
 .reyhoon-app {
   background-color: #f6f9fc;
   padding-bottom: 100px;
-  padding-top: 300px;
+  padding-top: 100px;
 }
 .reyhoon-app .reyhoon-app-box {
   background-color: #fff;
@@ -290,7 +283,7 @@
   width: 60%;
 }
 .reyhoon-app .reyhoon-app-box .reyhoon-app-form:after {
-  content: url("images/app_bg.png");
+  content: url("../images/app_bg.png");
   position: absolute;
   right: 120%;
   bottom: -180px;

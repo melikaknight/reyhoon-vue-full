@@ -52,6 +52,28 @@ CitySchema.statics = {
       .populate({
         path: 'areas',
         select: 'area slug',
+        populate: {
+          path: 'restaurants',
+          select: 'name slug logo',
+          populate: [
+            {
+              path: 'address',
+              select: 'address',
+            },
+            {
+              path: 'menu',
+              select: 'foodType',
+              populate: {
+                path: 'foodType',
+                select: 'foodType',
+              },
+            },
+            {
+              path: 'comments',
+              select: 'quality packaging deliveryTime rating',
+            },
+          ],
+        },
       })
       .select('city slug')
       .exec();
