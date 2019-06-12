@@ -1,0 +1,36 @@
+{
+  "sectionTitle": "ریحون روی موبایل",
+  "sectionSubTitle": "برای دریافت لینک دانلود اپلیکیشن ریحون، شماره موبایل خود را وارد کنید.",
+  "appLinks": [
+    {
+      "id": "sibapp",
+      "url": "#",
+      "imageSrc": "/assets/images/sibapp_light.png",
+      "imageAlt": "Sib App Light Button"
+    },
+    {
+      "id": "google-play",
+      "url": "#",
+      "imageSrc": "/assets/images/googleplay_light.png",
+      "imageAlt": "Google Play Light Button"
+    },
+    {
+      "id": "cafe-bazaar",
+      "url": "#",
+      "imageSrc": "/assets/images/cafebazaar_light.png",
+      "imageAlt": "Cafe Bazaar Light Button"
+    },
+    {
+      "id": "apple-app-store",
+      "url": "#",
+      "imageSrc": "/assets/images/ios_direct_light.png",
+      "imageAlt": "iOS Light Button"
+    },
+    {
+      "id": "reyhoon-website",
+      "url": "#",
+      "imageSrc": "/assets/images/reyhoon_light.png",
+      "imageAlt": "Reyhoon Light Button"
+    }
+  ]
+}

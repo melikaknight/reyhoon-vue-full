@@ -22,11 +22,11 @@ router.route('/:slug/comments')
 
 // Post a new comment
 /**
-  @property {number} req.body.author - slug of the posting user
+  @property {string} req.body.author - slug of the posting user
   @property {number} req.body.quality
   @property {number} req.body.packaging
   @property {number} req.body.deliveryTime
-  @property {number} req.body.comment - Optional
+  @property {string} req.body.comment - Optional
 */
 router.route('/:slug/comments')
   /** Post /api/restaurants/:slug/comments - Get a restaurant comments */
@@ -38,14 +38,14 @@ router.route('/:slug/comments')
 
 // Register a new restaruant
 /**
-  @property {number} req.body.name - name of the restaurant in Persian => صوفی
-  @property {number} req.body.slug - name of the restaurant in English => soofi
-  @property {number} req.body.address - address of the restaurant
-  @property {number} req.body.area - area name in English => saadat-abad
-  @property {number} req.body.logo
-  @property {number} req.body.coverImage
-  @property {number} req.body.openingTime => "13:00"
-  @property {number} req.body.closingTime => "23:30"
+  @property {string} req.body.name - name of the restaurant in Persian => صوفی
+  @property {string} req.body.slug - name of the restaurant in English => soofi
+  @property {string} req.body.address - address of the restaurant
+  @property {string} req.body.area - area name in English => saadat-abad
+  @property {string} req.body.logo
+  @property {string} req.body.coverImage
+  @property {string} req.body.openingTime => "13:00"
+  @property {string} req.body.closingTime => "23:30"
 */
 router.route('/create')
   /** Post /api/restaurants/create */

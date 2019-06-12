@@ -74,8 +74,12 @@
       selectedCity(newValue){
         this.selectedArea = null;
         this.filterCityAreas();
+        this.$store.commit('SET_SELECTED_CITY', {
+          selectedCity: newValue
+        });
+        this.$store.dispatch('getCityRestaurants', newValue);
       },
-      cityAreas(newValue){
+      cityAreas(){
         this.filterCityAreas();
       }
     },

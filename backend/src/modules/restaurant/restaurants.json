@@ -4,8 +4,8 @@
     "slug": "lanjin",
     "address": "شهرک غرب، خیابان دادمان ، پلاک ۳۶",
     "area": "saadat-abad",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/langine_4867_1538558144.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/langine.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "19:00",
     "closingTime": "23:30"
   },
@@ -14,8 +14,8 @@
     "slug": "bijan",
     "address": "خیابان میرداماد، میدان مادر، خیابان بهروز، برج بیژن",
     "area": "saadat-abad",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bijan-fasfood_464_1520945292.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/bijan.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
@@ -24,8 +24,8 @@
     "slug": "lidoma",
     "address": "قیطریه ، بلوار قیطریه ، روبروی پارک",
     "area": "elahiye",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/lidoma_3137_1520945331.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/lidoma.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "19:30",
     "closingTime": "22:30"
   },
@@ -34,17 +34,17 @@
     "slug": "bamahas",
     "address": "بالاتر از میدان باهنر، محله نیاوران، میدان نیاوران",
     "area": "farmaniye",
-    "logo_url": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/bamahas_1400_1520945270.jpeg",
+    "logo": "/assets/images/logos/bamahas.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
   {
     "name": "چاپ چاپ",
-    "slug": "chapchap",
+    "slug": "chopchop",
     "address": "خیابان فرشته، خیابان بوسنی و هرزگوین، پلاک ۲۳، مجتمع تجاری مینیاتور، طبقه همکف",
     "area": "farmaniye",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/chop-chop_1505_1542013057.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/chop-chop.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
@@ -53,8 +53,8 @@
     "slug": "shen",
     "address": "بلوار معالی آباد، بلوار دوستان، نبش کوچه ششم",
     "area": "farhang-shahr",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/shen-fastfood_2191_1520945287.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/shen.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
@@ -63,8 +63,8 @@
     "slug": "tooba",
     "address": "معالی آباد، روبروی پارک ملت، نبش کوچه ۲۹",
     "area": "farhang-shahr",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/tooba-catering_2210_1520945289.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/tooba.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
@@ -73,8 +73,8 @@
     "slug": "berantin",
     "address": "خیابان ستارخان، نبش کوچه ۱۲",
     "area": "satar-khan",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/brentine_7061_1552741601.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/brentine.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   },
@@ -83,8 +83,8 @@
     "slug": "soofi",
     "address": "خیابان عفیف آباد",
     "area": "satar-khan",
-    "logo": "https://dist.reyhoon-static.com/uploads/images/restaurants/logos/soofi-restaurant_2320_1520945292.jpeg",
-    "coverImage": "https://dist.reyhoon-static.com/uploads/images/restaurant-types/misc/international-restaurant_1546931982.jpeg",
+    "logo": "/assets/images/logos/soofi.jpeg",
+    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30"
   }

@@ -38,6 +38,14 @@ const actions = {
       cities,
     });
   },
+  async getCityRestaurants ({ dispatch, commit }, citySlug) {
+    const cityRestaurants = await dispatch('callAPI', {
+      url: `/cities/${citySlug}`,
+    });
+    commit('SET_CITY_RESTAURANTS', {
+      cityRestaurants,
+    });
+  },
 };
 
 export default actions;

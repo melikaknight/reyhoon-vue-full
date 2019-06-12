@@ -2,10 +2,12 @@ import httpClient from '@/services/httpClient';
 
 const state = {
   appName: 'Reyhoon Vue',
-  appAuthor: 'Melika Abdolahi',
+  appAuthor: 'ملیکا عبدالهی',
   httpClient: httpClient(),
   errorMessage: "",
   cities: [],
+  selectedCity: "tehran",
+  cityRestaurants: [],
 };
 
 export default state;

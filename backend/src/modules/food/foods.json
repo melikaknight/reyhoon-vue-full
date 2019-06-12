@@ -8,11 +8,19 @@
     "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304435_1529931896.jpeg"
   },
   {
+    "name": "پیتزا 4 فصل",
+    "price": "45000",
+    "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
+    "foodType": "pizza",
+    "restaurant": "tooba",
+    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304435_1529931896.jpeg"
+  },
+  {
     "name": "پیتزا چیکن",
     "price": "34000",
     "ingredients": "فیله مرغ طعم دار شده، قارچ، فلفل دلمه و پنیز موزارلا",
     "foodType": "pizza",
-    "restaurant": "lanjin",
+    "restaurant": "shen",
     "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304438_1529931275.jpeg"
   },
   {
@@ -40,10 +48,18 @@
     "image": ""
   },
   {
-    "name": "ته چین مرغ و بادمجان",
+    "name": "چلو کباب مخصوص",
+    "price": "38000",
+    "ingredients": "",
+    "foodType": "kabab",
+    "restaurant": "soofi",
+    "image": ""
+  },
+  {
+    "name": "چلو کباب مخصوص",
     "price": "28000",
     "ingredients": "",
-    "foodType": "irani",
+    "foodType": "kabab",
     "restaurant": "berantin",
     "image": ""
   },
@@ -53,6 +69,62 @@
     "ingredients": "",
     "foodType": "stew",
     "restaurant": "berantin",
+    "image": ""
+  },
+  {
+    "name": "چلو خورشت فسنجون",
+    "price": "36000",
+    "ingredients": "",
+    "foodType": "stew",
+    "restaurant": "lidoma",
+    "image": ""
+  },
+  {
+    "name": "چلو کباب بختیاری",
+    "price": "45000",
+    "ingredients": "",
+    "foodType": "kabab",
+    "restaurant": "lidoma",
+    "image": ""
+  },
+  {
+    "name": "چیزبرگر مخصوص",
+    "price": "18000",
+    "ingredients": "",
+    "foodType": "burger",
+    "restaurant": "chopchop",
+    "image": ""
+  },
+  {
+    "name": "سالاد سزار",
+    "price": "12000",
+    "ingredients": "",
+    "foodType": "salad",
+    "restaurant": "chopchop",
+    "image": ""
+  },
+  {
+    "name": "چلو کباب نگینی",
+    "price": "25800",
+    "ingredients": "",
+    "foodType": "kabab",
+    "restaurant": "bamahas",
+    "image": ""
+  },
+  {
+    "name": "جوجه چینی",
+    "price": "45000",
+    "ingredients": "",
+    "foodType": "kabab",
+    "restaurant": "bijan",
+    "image": ""
+  },
+  {
+    "name": "چلو خورشت بادمجان",
+    "price": "45000",
+    "ingredients": "",
+    "foodType": "stew",
+    "restaurant": "bijan",
     "image": ""
   }
 ]
