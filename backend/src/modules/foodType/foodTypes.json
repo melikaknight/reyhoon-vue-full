@@ -2,49 +2,57 @@
   {
     "foodType": "ایرانی",
     "slug": "irani",
+    "featured": false,
     "cardImageUrl": "/assets/images/foods/irani_card.jpeg",
     "coverImageUrl": "/assets/images/foods/irani_cover.jpeg"
   },
   {
     "foodType": "فست فود",
     "slug": "fast-food",
+    "featured": false,
     "cardImageUrl": "/assets/images/foods/fastfood_card.jpeg",
     "coverImageUrl": "/assets/images/foods/fastfood_cover.jpeg"
   },
   {
     "foodType": "ساندویچ",
     "slug": "sandwich",
+    "featured": true,
     "cardImageUrl": "/assets/images/foods/sandwich_card.jpeg",
     "coverImageUrl": "/assets/images/foods/sandwich_cover.jpeg"
   },
   {
     "foodType": "برگر",
     "slug": "burger",
+    "featured": true,
     "cardImageUrl": "/assets/images/foods/burger_card.jpeg",
     "coverImageUrl": "/assets/images/foods/burger_cover.jpeg"
   },
   {
     "foodType": "سالاد",
     "slug": "salad",
+    "featured": false,
     "cardImageUrl": "/assets/images/foods/salad_card.jpeg",
     "coverImageUrl": "/assets/images/foods/salad_cover.jpeg"
   },
   {
     "foodType": "پیتزا",
     "slug": "pizza",
+    "featured": true,
     "cardImageUrl": "/assets/images/foods/pizza_card.jpeg",
     "coverImageUrl": "/assets/images/foods/pizza_cover.jpeg"
   },
   {
     "foodType": "خورشت",
     "slug": "stew",
+    "featured": false,
     "cardImageUrl": "/assets/images/foods/stew_card.jpeg",
     "coverImageUrl": "/assets/images/foods/stew_cover.jpeg"
   },
   {
     "foodType": "کباب",
     "slug": "kabab",
-    "cardImageUrl": "/assets/images/foods/kabab_card.jpeg",
-    "coverImageUrl": "/assets/images/foods/kabab_cover.jpeg"
+    "featured": true,
+    "cardImageUrl": "/assets/images/foods/kebab_card.jpeg",
+    "coverImageUrl": "/assets/images/foods/kebab_cover.jpeg"
   }
 ]

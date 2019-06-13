@@ -46,7 +46,13 @@ const getters = {
       returnCount
     );
     return returnRestaurants;
-  } ,
+  },
+  featuredFoodTypesGetter: (state) => {
+    return state.foodTypes.filter(foodType => foodType.featured);
+  },
+  regularFoodTypesGetter: (state) => {
+    return state.foodTypes.filter(foodType => foodType.featured === false);
+  },
 };
 
 export default getters;

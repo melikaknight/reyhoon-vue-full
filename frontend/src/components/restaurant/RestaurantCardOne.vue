@@ -28,7 +28,7 @@
       </div>
       <div class="best-restaurants-services mb-2 mt-2">
         <span 
-          v-for="(foodType,index) in foodTypes"
+          v-for="(foodType,index) in foodTypesDisplay"
           :key="index"
         >
           {{ foodType }}
@@ -55,7 +55,7 @@
         type: String,
         required: true,
       },
-      menu: {
+      foodTypes: {
         type: Array,
         required: true,
       },
@@ -73,15 +73,15 @@
       }
     },
     computed: {
-      foodTypes(){
-        if (this.menu.length) {
+      foodTypesDisplay(){
+        if (this.foodTypes.length) {
           const foodTypesReducer = (
               foodTypes, currentMenuItem
             ) => ([
               ...foodTypes,
-              currentMenuItem.foodType.foodType
+              currentMenuItem.foodType
             ]);
-          return this.menu.reduce(foodTypesReducer, []);
+          return this.foodTypes.reduce(foodTypesReducer, []);
         }
         return [];
       }

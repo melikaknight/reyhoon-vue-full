@@ -4,6 +4,12 @@ const Food = require('./food.model');
 const FoodType = require('../foodType/foodType.model');
 const Restaurant = require('../restaurant/restaurant.model');
 
+const registerFood = async ({ newFood }) => {
+  await Restaurant.registerFood(newFood);
+  await Restaurant.registerFoodType(newFood);
+  return newFood.save();
+};
+
 const foodSeeder = async () => {
   const restaurants = await Restaurant.list();
   const foodTypes = await FoodType.list();
@@ -27,7 +33,7 @@ const foodSeeder = async () => {
         ingredients,
         image,
       });
-      return Restaurant.registerFood(newFood).then(() => newFood.save());
+      return registerFood({ newFood });
     }
     return null;
   });

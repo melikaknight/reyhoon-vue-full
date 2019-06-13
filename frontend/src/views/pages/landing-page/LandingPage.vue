@@ -4,6 +4,7 @@
     <show-case-section />
     <top-restaurants-section />
     <best-restaurants-section />
+    <food-selection-section />
     <reyhoon-app-section />
   </fragment>
 </template>
@@ -13,6 +14,7 @@
   import TopRestaurantsSection from '@/views/sections/top-restaurants/TopRestaurantsSection.vue';
   import BestRestaurantsSection from '@/views/sections/best-restaurants/BestRestaurantsSection.vue';
   import ReyhoonAppSection from '@/views/sections/reyhoon-app/ReyhoonAppSection.vue';
+  import FoodSelectionSection from '@/views/sections/food-selection/FoodSelectionSection.vue';
 
   export default {
     name: "LandingPage",
@@ -22,6 +24,7 @@
       TopRestaurantsSection,
       BestRestaurantsSection,
       ReyhoonAppSection,
+      FoodSelectionSection,
     },
   }
 </script>

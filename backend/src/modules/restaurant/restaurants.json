@@ -7,7 +7,13 @@
     "logo": "/assets/images/logos/langine.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "19:00",
-    "closingTime": "23:30"
+    "closingTime": "23:30",
+    "foodTypes": [
+      "pizza",
+      "burger",
+      "salad",
+      "sandwich"
+    ]
   },
   {
     "name": "بیژن",
@@ -17,7 +23,11 @@
     "logo": "/assets/images/logos/bijan.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "kabab",
+      "stew"
+    ]
   },
   {
     "name": "لیدوما",
@@ -27,7 +37,11 @@
     "logo": "/assets/images/logos/lidoma.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "19:30",
-    "closingTime": "22:30"
+    "closingTime": "22:30",
+    "foodTypes": [
+      "kabab",
+      "stew"
+    ]
   },
   {
     "name": "باماهاس",
@@ -36,7 +50,10 @@
     "area": "farmaniye",
     "logo": "/assets/images/logos/bamahas.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "kabab"
+    ]
   },
   {
     "name": "چاپ چاپ",
@@ -46,7 +63,11 @@
     "logo": "/assets/images/logos/chop-chop.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "burger",
+      "salad"
+    ]
   },
   {
     "name": "فست فود شن",
@@ -56,7 +77,10 @@
     "logo": "/assets/images/logos/shen.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "pizza"
+    ]
   },
   {
     "name": "طوبی",
@@ -66,7 +90,10 @@
     "logo": "/assets/images/logos/tooba.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "pizza"
+    ]
   },
   {
     "name": "برنتین",
@@ -76,7 +103,12 @@
     "logo": "/assets/images/logos/brentine.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "irani",
+      "kabab",
+      "stew"
+    ]
   },
   {
     "name": "صوفی",
@@ -86,6 +118,9 @@
     "logo": "/assets/images/logos/soofi.jpeg",
     "coverImage": "/assets/images/covers/international-restaurant.jpeg",
     "openingTime": "13:00",
-    "closingTime": "16:30"
+    "closingTime": "16:30",
+    "foodTypes": [
+      "kabab"
+    ]
   }
 ]

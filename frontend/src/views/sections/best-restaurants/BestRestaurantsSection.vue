@@ -12,7 +12,7 @@
           :name="restaurant.name"
           :slug="restaurant.slug"
           :logo="restaurant.logo"
-          :menu="restaurant.menu"
+          :foodTypes="restaurant.foodTypes"
           :averageRating="restaurant.averageRating"
           :commentsCount="restaurant.comments.length"
           :address="restaurant.address.address"

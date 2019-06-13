@@ -40,6 +40,14 @@
     "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304122_1529931529.jpeg"
   },
   {
+    "name": "ساندویچ مرغ",
+    "price": "18500",
+    "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
+    "foodType": "sandwich",
+    "restaurant": "lanjin",
+    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304122_1529931529.jpeg"
+  },
+  {
     "name": "پلومرغ هندی",
     "price": "35500",
     "ingredients": "",

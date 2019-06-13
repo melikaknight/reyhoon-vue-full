@@ -20,6 +20,9 @@ const mutations = {
   },
   SET_CITY_RESTAURANTS(state, { cityRestaurants }) {
     state.cityRestaurants = cityRestaurants;
+  },
+  SET_FOOD_TYPES(state, { foodTypes }) {
+    state.foodTypes = foodTypes;
   }
 };
 

@@ -8,6 +8,7 @@ const state = {
   cities: [],
   selectedCity: "tehran",
   cityRestaurants: [],
+  foodTypes: [],
 };
 
 export default state;

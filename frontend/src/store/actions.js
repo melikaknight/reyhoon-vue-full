@@ -46,6 +46,17 @@ const actions = {
       cityRestaurants,
     });
   },
+  async getFoodTypes ({ dispatch, commit }, citySlug) {
+    const foodTypes = await dispatch('callAPI', {
+      url: `/foodTypes`,
+      params: {
+        citySlug,
+      },
+    });
+    commit('SET_FOOD_TYPES', {
+      foodTypes,
+    });
+  },
 };
 
 export default actions;
