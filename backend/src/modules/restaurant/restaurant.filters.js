@@ -20,9 +20,9 @@ const filterRestaurantsByArea = async (restaurants, area) => {
 // Function to filter restaurants which serve a given array of food types
 const filterRestaurantsByCategories = async (restaurants, categories) => {
   const filteredResults = await restaurants.filter((restaurant) => {
-    if (restaurant.menu) {
-      const result = restaurant.menu.filter(
-        menuItem => categories.includes(menuItem.foodType.slug)
+    if (restaurant.foodTypes) {
+      const result = restaurant.foodTypes.filter(
+        foodType => categories.includes(foodType.slug)
       );
       return !!result.length;
     }

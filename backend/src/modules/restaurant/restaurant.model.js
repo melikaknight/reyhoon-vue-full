@@ -42,6 +42,11 @@ const RestaurantSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Food',
   }],
+  // This is where we store all types of food the restaurant serves
+  foodTypes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'FoodType',
+  }],
   // Here we store comments that have been posted by our users
   comments: [{
     type: mongoose.Schema.Types.ObjectId,
@@ -101,6 +106,16 @@ RestaurantSchema.statics = {
       },
     });
   },
+  async getByFoodType(foodTypeId) {
+    const result = await this.list({
+      filter: {
+        foodTypes: {
+          $in: foodTypeId,
+        },
+      },
+    });
+    return result;
+  },
   // This method is used to add a new Food model to the menu field of a certain restaurant
   // 1. Find the restaurant
   // 2. Add the new Food model to the menu
@@ -110,6 +125,19 @@ RestaurantSchema.statics = {
       {
         $push: {
           menu: newFood,
+        },
+      }
+    );
+  },
+  // This method is used to add a new FoodTypeId to the foodtypes field of a certain restaurant
+  // 1. Find the restaurant
+  // 2. Add the new FoodTypeId to the foodTypes array
+  registerFoodType(newFood) {
+    return this.findOneAndUpdate(
+      { _id: newFood.restaurant },
+      {
+        $push: {
+          foodTypes: newFood.foodType,
         },
       }
     );
@@ -133,13 +161,13 @@ RestaurantSchema.statics = {
   async list({ filter = {} } = {}) {
     const result = await this.find(filter)
       .populate({
+        path: 'foodTypes',
+        select: 'foodType slug',
+      })
+      .populate({
         path: 'menu',
         // What properties to return
         select: 'name price ingredients',
-        populate: {
-          path: 'foodType',
-          select: 'foodType slug',
-        },
       })
       .populate({
         path: 'comments',

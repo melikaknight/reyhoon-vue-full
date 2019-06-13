@@ -2,6 +2,7 @@ const express = require('express');
 const userRoutes = require('./modules/user/user.routes');
 const areaRoutes = require('./modules/area/area.routes');
 const cityRoutes = require('./modules/city/city.routes');
+const foodTypeRoutes = require('./modules/foodType/foodType.routes');
 const restaurantRoutes = require('./modules/restaurant/restaurant.routes');
 
 const router = express.Router(); // eslint-disable-line new-cap
@@ -20,5 +21,8 @@ router.use('/areas', areaRoutes);
 
 // mount restaurant routes at /restaurants
 router.use('/restaurants', restaurantRoutes);
+
+// mount foodType routes at /foodTypes
+router.use('/foodTypes', foodTypeRoutes);
 
 module.exports = router;

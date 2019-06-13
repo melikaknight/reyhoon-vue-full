@@ -73,10 +73,16 @@ AreaSchema.statics = {
       .populate({
         path: 'restaurants',
         select: '-menu -comments -updatedAt -createdAt -__v',
-        populate: {
-          path: 'address',
-          select: 'address',
-        },
+        populate: [
+          {
+            path: 'address',
+            select: 'address',
+          },
+          {
+            path: 'foodTypes',
+            select: 'foodType slug',
+          },
+        ],
       })
       .select('area slug')
       .exec();
