@@ -21,7 +21,7 @@
     "address": "خیابان میرداماد، میدان مادر، خیابان بهروز، برج بیژن",
     "area": "saadat-abad",
     "logo": "/assets/images/logos/bijan.jpeg",
-    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
+    "coverImage": "/assets/images/covers/fast-food-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30",
     "foodTypes": [
@@ -35,7 +35,7 @@
     "address": "قیطریه ، بلوار قیطریه ، روبروی پارک",
     "area": "elahiye",
     "logo": "/assets/images/logos/lidoma.jpeg",
-    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
+    "coverImage": "/assets/images/covers/sandwich-restaurant.jpeg",
     "openingTime": "19:30",
     "closingTime": "22:30",
     "foodTypes": [
@@ -49,6 +49,7 @@
     "address": "بالاتر از میدان باهنر، محله نیاوران، میدان نیاوران",
     "area": "farmaniye",
     "logo": "/assets/images/logos/bamahas.jpeg",
+    "coverImage": "/assets/images/covers/fast-food-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30",
     "foodTypes": [
@@ -75,7 +76,7 @@
     "address": "بلوار معالی آباد، بلوار دوستان، نبش کوچه ششم",
     "area": "farhang-shahr",
     "logo": "/assets/images/logos/shen.jpeg",
-    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
+    "coverImage": "/assets/images/covers/fast-food-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30",
     "foodTypes": [
@@ -101,7 +102,7 @@
     "address": "خیابان ستارخان، نبش کوچه ۱۲",
     "area": "satar-khan",
     "logo": "/assets/images/logos/brentine.jpeg",
-    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
+    "coverImage": "/assets/images/covers/fast-food-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30",
     "foodTypes": [
@@ -116,7 +117,7 @@
     "address": "خیابان عفیف آباد",
     "area": "satar-khan",
     "logo": "/assets/images/logos/soofi.jpeg",
-    "coverImage": "/assets/images/covers/international-restaurant.jpeg",
+    "coverImage": "/assets/images/covers/iranian-food-restaurant.jpeg",
     "openingTime": "13:00",
     "closingTime": "16:30",
     "foodTypes": [

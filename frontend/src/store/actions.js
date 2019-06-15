@@ -38,7 +38,7 @@ const actions = {
       cities,
     });
   },
-  async getCityRestaurants ({ dispatch, commit }, citySlug) {
+  async getCityRestaurants ({ state, dispatch, commit }, citySlug = state.selectedCity) {
     const cityRestaurants = await dispatch('callAPI', {
       url: `/cities/${citySlug}`,
     });

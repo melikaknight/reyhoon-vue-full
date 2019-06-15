@@ -1,0 +1,16 @@
+{
+  "restaurantSections": [
+    {
+      "sectionTitle": "منوی رستوران",
+      "sectionHref": "#restaurant-menu"
+    },
+    {
+      "sectionTitle": "اطلاعات رستوران",
+      "sectionHref": "#restaurant-info"
+    },
+    {
+      "sectionTitle": "نظرات کاربران",
+      "sectionHref": "#restaurant-comments"
+    }
+  ]
+}

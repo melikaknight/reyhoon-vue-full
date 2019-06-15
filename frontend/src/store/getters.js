@@ -35,6 +35,16 @@ const getters = {
     }
     return cityRestaurants;
   },
+  cityRestaurantGetter: (state, getters) => (restaurantSlug) => {
+    const cityRestaurants = getters.cityRestaurantsGetter;
+    const restaurant = cityRestaurants.filter(
+      restaurant => restaurant.slug === restaurantSlug
+    );
+    if (restaurant.length) {
+      return restaurant[0];
+    }
+    return [];
+  },
   bestCityRestaurantsGetter:  (state, getters) => {
     const cityRestaurants = getters.cityRestaurantsGetter;
     const returnCount = 3;

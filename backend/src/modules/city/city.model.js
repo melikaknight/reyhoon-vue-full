@@ -54,7 +54,7 @@ CitySchema.statics = {
         select: 'area slug',
         populate: {
           path: 'restaurants',
-          select: 'name slug logo',
+          select: 'name slug logo coverImage openingTime closingTime',
           populate: [
             {
               path: 'address',
@@ -63,10 +63,32 @@ CitySchema.statics = {
             {
               path: 'foodTypes',
               select: 'foodType slug',
+              // options: {
+              //   sort: {
+              //     foodType: 1,
+              //   },
+              // },
             },
             {
               path: 'comments',
-              select: 'quality packaging deliveryTime rating',
+              select: 'quality packaging deliveryTime rating comment createdAt',
+              populate: {
+                path: 'author',
+                select: 'fullname',
+              },
+            },
+            {
+              path: 'menu',
+              select: 'name price ingredients image_url',
+              populate: {
+                path: 'foodType',
+                select: 'foodType _id',
+              },
+              // options: {
+              //   sort: {
+              //     'foodType.foodType': 1,
+              //   },
+              // },
             },
           ],
         },

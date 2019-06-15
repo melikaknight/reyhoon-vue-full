@@ -10,11 +10,17 @@
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "moment": "^2.24.0",
     "v-autocomplete": "^1.8.2",
     "vue": "^2.6.10",
+    "vue-currency-filter": "^3.4.2",
     "vue-fragment": "^1.5.1",
+    "vue-moment": "^4.0.0",
     "vue-router": "^3.0.3",
+    "vue-scrollactive": "^0.8.0",
+    "vue-slide-bar": "^1.2.0",
     "vue-star-rating": "^1.6.1",
+    "vue-sticky-directive": "0.0.8",
     "vue-toasted": "^1.1.27",
     "vuex": "^3.0.1"
   },

@@ -1,6 +1,6 @@
 <template>
   <!-- Top Navigation -->
-  <nav class="mj-nav">
+  <nav class="mj-nav" :style="position">
     <ul>
       <li>
         <router-link to="/login">ورود</router-link>
@@ -29,7 +29,23 @@
     computed: {
       ...mapState([
         'appAuthor',
-      ])
+      ]),
+      positionFixed(){
+        return{
+          position: 'fixed',
+        };
+      },
+      positionAbsolute(){
+        return {
+          position:'absolute',
+        };
+      },
+      position(){
+        return (this.$route.meta.topNavPosition === 'fixed')
+          ? this.positionFixed
+          : this.positionAbsolute;
+      }
+
     },
   }
 </script>

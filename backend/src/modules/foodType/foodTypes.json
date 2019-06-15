@@ -1,6 +1,6 @@
 [
   {
-    "foodType": "ایرانی",
+    "foodType": "غذاهای ایرانی",
     "slug": "irani",
     "featured": false,
     "cardImageUrl": "/assets/images/foods/irani_card.jpeg",
@@ -21,7 +21,7 @@
     "coverImageUrl": "/assets/images/foods/sandwich_cover.jpeg"
   },
   {
-    "foodType": "برگر",
+    "foodType": "برگرها",
     "slug": "burger",
     "featured": true,
     "cardImageUrl": "/assets/images/foods/burger_card.jpeg",
@@ -42,7 +42,7 @@
     "coverImageUrl": "/assets/images/foods/pizza_cover.jpeg"
   },
   {
-    "foodType": "خورشت",
+    "foodType": "غذاهای خورشتی",
     "slug": "stew",
     "featured": false,
     "cardImageUrl": "/assets/images/foods/stew_card.jpeg",
