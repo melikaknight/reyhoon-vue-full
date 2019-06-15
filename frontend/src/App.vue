@@ -14,8 +14,9 @@
   
   export default {
     name: 'app',
-    created: function(){
-      this.$store.dispatch('getCities');
+    created: async function(){
+      await this.$store.dispatch('getCities');
+      this.$store.dispatch('getCityRestaurants');
     },
     components: {
       TopNav,

@@ -41,7 +41,7 @@
 </template>
 <script>
   export default {
-    name: "RestaurantMinimal",
+    name: "RestaurantCardSecondary",
     props: {
       logo: {
         type: String,

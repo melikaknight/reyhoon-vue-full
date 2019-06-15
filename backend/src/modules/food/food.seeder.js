@@ -23,7 +23,8 @@ const foodSeeder = async () => {
         name,
         price,
         ingredients,
-        image,
+        // eslint-disable-next-line camelcase
+        image_url,
       } = food;
       const newFood = new Food({
         foodType: foodTypeId,
@@ -31,7 +32,7 @@ const foodSeeder = async () => {
         name,
         price,
         ingredients,
-        image,
+        image_url,
       });
       return registerFood({ newFood });
     }

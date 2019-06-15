@@ -25,7 +25,7 @@
   export default {
     name: "TopRestaurantsSection",
     created() {
-      this.$store.dispatch('getCityRestaurants', 'tehran');
+      // this.$store.dispatch('getCityRestaurants', 'tehran');
     },
     data: () => ({
 

@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   text-align: right;
+  background: #fafafa;
 }
 
 img {
@@ -68,6 +69,13 @@ p {
   width: 33.33%;
 }
 
+.col-50 {
+  width: 50%;
+  padding-bottom: 15px;
+}
+.col-100 {
+  width: 100%;
+}
 .text-center {
   text-align: center;
 }
@@ -257,7 +265,7 @@ p {
   font-weight: normal;
   padding: 0 5px;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 12px;
   text-decoration: inherit;
 }

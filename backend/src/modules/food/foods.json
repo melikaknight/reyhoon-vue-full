@@ -5,7 +5,7 @@
     "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
     "foodType": "pizza",
     "restaurant": "lanjin",
-    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304435_1529931896.jpeg"
+    "image_url": "/assets/images/foods/pizza_card.jpeg"
   },
   {
     "name": "پیتزا 4 فصل",
@@ -13,7 +13,7 @@
     "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
     "foodType": "pizza",
     "restaurant": "tooba",
-    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304435_1529931896.jpeg"
+    "image_url": "/assets/images/foods/pizza_card.jpeg"
   },
   {
     "name": "پیتزا چیکن",
@@ -21,7 +21,7 @@
     "ingredients": "فیله مرغ طعم دار شده، قارچ، فلفل دلمه و پنیز موزارلا",
     "foodType": "pizza",
     "restaurant": "shen",
-    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304438_1529931275.jpeg"
+    "image_url": "https://dist.reyhoon-static.com/uploads/image_urls/restaurants/menu_items/langine-cafe-fastfood_5472/304438_1529931275.jpeg"
   },
   {
     "name": "همبرگر سینگل",
@@ -29,7 +29,7 @@
     "ingredients": "",
     "foodType": "burger",
     "restaurant": "lanjin",
-    "image": ""
+    "image_url": "/assets/images/foods/burger_card.jpeg"
   },
   {
     "name": "سالاد لانجین",
@@ -37,7 +37,7 @@
     "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
     "foodType": "salad",
     "restaurant": "lanjin",
-    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304122_1529931529.jpeg"
+    "image_url": "/assets/images/foods/salad_cover.jpeg"
   },
   {
     "name": "ساندویچ مرغ",
@@ -45,7 +45,7 @@
     "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
     "foodType": "sandwich",
     "restaurant": "lanjin",
-    "image": "https://dist.reyhoon-static.com/uploads/images/restaurants/menu_items/langine-cafe-fastfood_5472/304122_1529931529.jpeg"
+    "image_url": "/assets/images/foods/sandwich_card.jpeg"
   },
   {
     "name": "پلومرغ هندی",
@@ -53,7 +53,7 @@
     "ingredients": "",
     "foodType": "irani",
     "restaurant": "berantin",
-    "image": ""
+    "image_url": ""
   },
   {
     "name": "چلو کباب مخصوص",
@@ -61,7 +61,7 @@
     "ingredients": "",
     "foodType": "kabab",
     "restaurant": "soofi",
-    "image": ""
+    "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
     "name": "چلو کباب مخصوص",
@@ -69,7 +69,7 @@
     "ingredients": "",
     "foodType": "kabab",
     "restaurant": "berantin",
-    "image": ""
+    "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
     "name": "چلو گوشت قشقایی",
@@ -77,7 +77,7 @@
     "ingredients": "",
     "foodType": "stew",
     "restaurant": "berantin",
-    "image": ""
+    "image_url": ""
   },
   {
     "name": "چلو خورشت فسنجون",
@@ -85,7 +85,7 @@
     "ingredients": "",
     "foodType": "stew",
     "restaurant": "lidoma",
-    "image": ""
+    "image_url": ""
   },
   {
     "name": "چلو کباب بختیاری",
@@ -93,7 +93,7 @@
     "ingredients": "",
     "foodType": "kabab",
     "restaurant": "lidoma",
-    "image": ""
+    "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
     "name": "چیزبرگر مخصوص",
@@ -101,7 +101,7 @@
     "ingredients": "",
     "foodType": "burger",
     "restaurant": "chopchop",
-    "image": ""
+    "image_url": "/assets/images/foods/burger_card.jpeg"
   },
   {
     "name": "سالاد سزار",
@@ -109,7 +109,7 @@
     "ingredients": "",
     "foodType": "salad",
     "restaurant": "chopchop",
-    "image": ""
+    "image_url": ""
   },
   {
     "name": "چلو کباب نگینی",
@@ -117,7 +117,7 @@
     "ingredients": "",
     "foodType": "kabab",
     "restaurant": "bamahas",
-    "image": ""
+    "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
     "name": "جوجه چینی",
@@ -125,7 +125,7 @@
     "ingredients": "",
     "foodType": "kabab",
     "restaurant": "bijan",
-    "image": ""
+    "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
     "name": "چلو خورشت بادمجان",
@@ -133,6 +133,6 @@
     "ingredients": "",
     "foodType": "stew",
     "restaurant": "bijan",
-    "image": ""
+    "image_url": ""
   }
 ]
