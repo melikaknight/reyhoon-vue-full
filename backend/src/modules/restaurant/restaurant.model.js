@@ -64,14 +64,42 @@ const RestaurantSchema = new mongoose.Schema({
 
 // eslint-disable-next-line prefer-arrow-callback
 // eslint-disable-next-line func-names
-RestaurantSchema.virtual('averageRating').get(function () {
+RestaurantSchema.virtual('totalRating').get(function () {
+  const initRating = {
+    averageRating: 0,
+    averageQualityRating: 0,
+    averageDeliveryRating: 0,
+    averagePackagingRating: 0,
+  };
   if (this.comments && this.comments.length) {
-    const averageRatingReducer = (
-      totalAverageRating, { rating }
-    ) => totalAverageRating + parseFloat(rating);
-    return (
-      parseFloat((this.comments.reduce(averageRatingReducer, 0) / this.comments.length).toFixed(1))
-    );
+    const commentsCount = this.comments.length;
+    const averageRatingReducer = (totalAverageRating, comment) => ({
+      averageRating: totalAverageRating.averageRating + comment.rating,
+      averageQualityRating: totalAverageRating.averageQualityRating + comment.quality,
+      averageDeliveryRating: totalAverageRating.averageDeliveryRating + comment.deliveryTime,
+      averagePackagingRating: totalAverageRating.averagePackagingRating + comment.packaging,
+    });
+
+    const totalRating = this.comments.reduce(averageRatingReducer, initRating);
+
+    return ({
+      averageRating: parseFloat(
+        (totalRating.averageRating / commentsCount)
+          .toFixed(1)
+      ),
+      averageQualityRating: parseFloat(
+        (totalRating.averageQualityRating / commentsCount)
+          .toFixed(1)
+      ),
+      averageDeliveryRating: parseFloat(
+        (totalRating.averageDeliveryRating / commentsCount)
+          .toFixed(1)
+      ),
+      averagePackagingRating: parseFloat(
+        (totalRating.averagePackagingRating / commentsCount)
+          .toFixed(1)
+      ),
+    });
   }
   return 0;
 });
@@ -134,7 +162,12 @@ RestaurantSchema.statics = {
   // 2. Add the new FoodTypeId to the foodTypes array
   registerFoodType(newFood) {
     return this.findOneAndUpdate(
-      { _id: newFood.restaurant },
+      {
+        _id: newFood.restaurant,
+        foodTypes: {
+          $nin: [newFood.foodType],
+        },
+      },
       {
         $push: {
           foodTypes: newFood.foodType,
@@ -191,7 +224,7 @@ RestaurantSchema.statics = {
           select: 'area slug',
         },
       })
-      .select('name slug averageRating openingTime closingTime')
+      .select('name slug totalRating openingTime closingTime')
       .exec();
     return result;
   },
