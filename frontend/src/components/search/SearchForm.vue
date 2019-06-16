@@ -23,6 +23,7 @@
             :component-item='searchInput.template' 
             :input-attrs="searchInput.attributes"
             :get-label='getLabel'
+            :auto-select-one-item="false"
             :min-len='0'
             @item-selected="itemSelected"
             @update-items='update'

@@ -387,6 +387,10 @@
   height: .2rem;
   background-color: #d40062;
 }
+.restaurant-navigation-item .scrollactive-item.is-active {
+  font-weight: 700;
+}
+
 .restaurant-food-type-navigation-item .scrollactive-item.is-active:before {
   content: "";
   position: absolute;
@@ -400,6 +404,13 @@
   margin-bottom: 3rem;
   text-align: right;
   position: relative;
+}
+.restaurant-food-type-navigation-item .scrollactive-item.is-active {
+  margin-right: 10px;
+}
+.restaurant-food-type-navigation-item a,
+.restaurant-navigation-item a{
+  transition: all .6s;
 }
 .restaurant-food-type-navigation-link {
 
@@ -571,7 +582,16 @@
 }
 .food-item-image-container {
   width: 5rem;
+  height: 5rem;
   align-self: center;
+}
+.food-item-image-container img {
+  height: 100%;
+  width: 100%;
+}
+.restaurant-menu-food-type {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
 }
 .food-item-actions {
   display: flex;

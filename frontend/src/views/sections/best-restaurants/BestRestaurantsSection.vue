@@ -13,7 +13,7 @@
           :slug="restaurant.slug"
           :logo="restaurant.logo"
           :foodTypes="restaurant.foodTypes"
-          :averageRating="restaurant.averageRating"
+          :averageRating="restaurant.totalRating.averageRating"
           :commentsCount="restaurant.comments.length"
           :address="restaurant.address.address"
         />

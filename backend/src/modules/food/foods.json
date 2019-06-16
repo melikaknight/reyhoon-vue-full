@@ -128,6 +128,14 @@
     "image_url": "/assets/images/foods/kebab_card.jpeg"
   },
   {
+    "name": "جوجه نگینی",
+    "price": "47000",
+    "ingredients": "",
+    "foodType": "kabab",
+    "restaurant": "bijan",
+    "image_url": ""
+  },
+  {
     "name": "چلو خورشت بادمجان",
     "price": "45000",
     "ingredients": "",

@@ -49,7 +49,7 @@ const getters = {
     const cityRestaurants = getters.cityRestaurantsGetter;
     const returnCount = 3;
     const sortedCityRestaurants =  cityRestaurants.sort(
-      (a, b) => parseFloat(b.averageRating) - parseFloat(a.averageRating)
+      (a, b) => parseFloat(b.totalRating.averageRating) - parseFloat(a.totalRating.averageRating)
     );
     const returnRestaurants =  sortedCityRestaurants.slice(
       0,

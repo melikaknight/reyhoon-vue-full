@@ -16,7 +16,7 @@
           :slug="restaurant.slug"
           :logo="restaurant.logo"
           :foodTypes="restaurant.foodTypes"
-          :averageRating="restaurant.averageRating"
+          :averageRating="restaurant.totalRating.averageRating"
           :comments="restaurant.comments"
           :address="restaurant.address"
         />
@@ -68,7 +68,7 @@
             >
               <li 
                 class="restaurant-food-type-navigation-item"
-                v-for="(foodType, index) in restaurant.foodTypes"
+                v-for="(foodType, index) in menuGroupByFoodType"
                 :key="index"
               >
                 <a 
@@ -82,27 +82,46 @@
           </div>
         </div>
         <div class="restaurant-menu-search-container">
-          <input type="text" name="s" placeholder="مثلا چلوکباب">
+          <input 
+            type="text" 
+            name="s" 
+            placeholder="مثلا چلوکباب"
+            v-model="searchInput"
+          >
           <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div class="restaurant-food-type-menu-container">
           <row
-            v-for="(menuItem, index) in restaurant.menu"
+            v-for="(foodType, index) in menuGroupByFoodType"
             :key="index"  
           >
             <column 
               width="100" 
-              :id="menuItem.foodType._id"
+              :id="foodType._id"
             >
-              <h1> {{ menuItem.foodType.foodType }} </h1>
+              <h1 class="restaurant-menu-food-type"> {{ foodType.foodType }} </h1>
             </column>
-            <column width="50">
-              <food-item 
-                :name="menuItem.name"
-                :price="menuItem.price"
-                :ingredients="menuItem.ingredients"
-                :image="menuItem.image_url"
-              />
+            <fragment
+              v-if="foodType.foods.length"
+              >
+              <column 
+                width="50"
+                v-for="(foodItem, index) in foodType.foods"
+                :key="index"
+              >
+                <food-item 
+                  :name="foodItem.name"
+                  :price="foodItem.price"
+                  :ingredients="foodItem.ingredients"
+                  :image="foodItem.image_url"
+                />
+              </column>
+            </fragment>
+            <column 
+              width="100"
+              v-else
+            >
+              <p>آیتم مورد نظر شما در این قسمت یافت نشد.</p>
             </column>
           </row>
         </div>
@@ -138,10 +157,10 @@
         <row>
           <column width="100">
             <restaurant-rating-card
-              :averageRating="restaurant.averageRating"
-              :averageQualityRating="3.2"
-              :averageDeliveryRating="4.7"
-              :averagePackagingRating="5"
+              :averageRating="restaurant.totalRating.averageRating"
+              :averageQualityRating="restaurant.totalRating.averageQualityRating"
+              :averageDeliveryRating="restaurant.totalRating.averageDeliveryRating"
+              :averagePackagingRating="restaurant.totalRating.averagePackagingRating"
               :commentsCount="restaurant.comments.length"
             />
           </column>
@@ -175,6 +194,7 @@
     name: "RestaurantPage",
     data: () => ({
       pageContent,
+      searchInput: "",
     }),
     components: {
       RestaurantCardPrimary,
@@ -193,6 +213,28 @@
       restaurant(){
         return this.restaurantGetter(this.restaurantSlug);
       },
+      menuGroupByFoodType(){
+        if (this.restaurant) {
+          const searchInput = this.searchInput;
+          return this.restaurant.foodTypes.map((foodType) => {
+            const foods = this.restaurant.menu.filter(menuItem => {
+              if (menuItem.foodType._id === foodType._id 
+              && (new RegExp(searchInput.toLowerCase())).test(menuItem.name.toLowerCase()) ) {
+                return true;
+              }
+              return false;
+            }); 
+            // menuItem.foodType._id === foodType._id
+            // );
+            return {
+              foodType: foodType.foodType,
+              _id: foodType._id,
+              foods,
+            };
+          });
+        }
+        return [];
+      }
     }
   }
 </script>
