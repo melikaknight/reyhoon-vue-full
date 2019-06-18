@@ -4,6 +4,7 @@ import { httpClient } from '@/services/httpClient';
   . Instead of mutating the state, actions commit mutations.
   . Actions can contain arbitrary asynchronous operations.
 */
+import qs from 'qs';
 
 const actions = {
   /*
@@ -18,6 +19,12 @@ const actions = {
         data: request.data || {},
         params: request.params || {},
         timeout: 5000,
+        paramsSerializer: (params) => qs.stringify(
+          params, {
+            arrayFormat: 'comma',
+            indices: false,
+          },
+        ),
       });
       if (response.status === 200) {
         return Promise.resolve(response.data);
@@ -46,6 +53,23 @@ const actions = {
       cityRestaurants,
     });
   },
+  async getAreaRestaurants ({ dispatch, commit }, areaSlug) {
+    const areaRestaurants = await dispatch('callAPI', {
+      url: `/areas/${areaSlug}`,
+    });
+    commit('SET_AREA_RESTAURANTS', {
+      areaRestaurants,
+    });
+  },
+  async getFilteredAreaRestaurants ({ dispatch, commit }, params) {
+    const filteredAreaRestaurants = await dispatch('callAPI', {
+      url: `/restaurants`,
+      params,
+    });
+    commit('SET_FILTERED_AREA_RESTAURANTS', {
+      filteredAreaRestaurants,
+    });
+  },
   async getFoodTypes ({ dispatch, commit }, citySlug) {
     const foodTypes = await dispatch('callAPI', {
       url: `/foodTypes`,
@@ -54,6 +78,25 @@ const actions = {
       },
     });
     commit('SET_FOOD_TYPES', {
+      foodTypes,
+    });
+  },
+  async getFoodTypesByCityArea ({ dispatch, commit }, payload) {
+    const {
+      citySlug,
+      areaSlug,
+      countsOnly = true
+    } = payload;
+
+    const foodTypes = await dispatch('callAPI', {
+      url: `/foodTypes`,
+      params: {
+        citySlug,
+        areaSlug,
+        countsOnly,
+      },
+    });
+    commit('SET_FOOD_TYPES_BY_AREA', {
       foodTypes,
     });
   },

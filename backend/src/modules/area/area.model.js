@@ -72,7 +72,7 @@ AreaSchema.statics = {
       })
       .populate({
         path: 'restaurants',
-        select: '-menu -comments -updatedAt -createdAt -__v',
+        select: '-menu -updatedAt -createdAt -__v',
         populate: [
           {
             path: 'address',
@@ -81,6 +81,10 @@ AreaSchema.statics = {
           {
             path: 'foodTypes',
             select: 'foodType slug',
+          },
+          {
+            path: 'comments',
+            select: 'quality packaging deliveryTime rating createdAt',
           },
         ],
       })

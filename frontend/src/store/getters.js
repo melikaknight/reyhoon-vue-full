@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const getters = {
   errorMessageGetter: (state) => (state.errorMessage),
   citiesGetter: (state) => (state.cities),
@@ -35,6 +37,12 @@ const getters = {
     }
     return cityRestaurants;
   },
+  areaRestaurantsGetter: (state) => state.areaRestaurants,
+  filteredAreaRestaurantsGetter: (state) => (searchInput) => {
+    return state.filteredAreaRestaurants.filter(
+      (restaurant) => new RegExp(searchInput).test(restaurant.name)
+    );
+  },
   cityRestaurantGetter: (state, getters) => (restaurantSlug) => {
     const cityRestaurants = getters.cityRestaurantsGetter;
     const restaurant = cityRestaurants.filter(
@@ -62,6 +70,13 @@ const getters = {
   },
   regularFoodTypesGetter: (state) => {
     return state.foodTypes.filter(foodType => foodType.featured === false);
+  },
+  foodTypesByAreaGetter: (state) => (filterInput) => {
+    const filteredFoodTypes = state.foodTypesByArea.filter(
+      (foodType) => new RegExp(filterInput).test(foodType.foodType)
+    );
+    const sortedFoodTypes = _.orderBy(filteredFoodTypes, 'selected', ['desc']);
+    return sortedFoodTypes;
   },
 };
 

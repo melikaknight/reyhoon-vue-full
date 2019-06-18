@@ -9,7 +9,10 @@ import VueMoment from 'vue-moment';
 import moment from 'moment';
 import 'moment/locale/fa';
 import VueCurrencyFilter from 'vue-currency-filter'
+import PrettyCheck from 'pretty-checkbox-vue/check';
+import 'pretty-checkbox/dist/pretty-checkbox.min.css';
 
+// @import '~pretty-checkbox/src/pretty-checkbox.scss';
 // importing component CSS
 import 'v-autocomplete/dist/v-autocomplete.css';
 
@@ -36,5 +39,6 @@ Vue.use(VueScrollactive);
 Vue.component('row', Row);
 Vue.component('icon', Icon);
 Vue.component('column', Column);
+Vue.component('p-check', PrettyCheck);
 Vue.component('star-rating', StarRating);
 Vue.component('vue-slide-bar', VueSlideBar);

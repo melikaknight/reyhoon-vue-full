@@ -10,9 +10,9 @@
           {{ ingredients }}
         </p>
         <button class="food-item-add-to-cart">
-          <span class="food-item-action-icon">
+          <!-- <span class="food-item-action-icon">
             +
-          </span>
+          </span> -->
           <span class="food-item-action-title">
             افزودن به سبد خرید
           </span>

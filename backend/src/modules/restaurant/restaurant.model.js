@@ -1,5 +1,6 @@
+/* eslint-disable func-names */
 const mongoose = require('mongoose');
-
+const moment = require('moment');
 /**
  * Restaurant Schema
  */
@@ -102,6 +103,20 @@ RestaurantSchema.virtual('totalRating').get(function () {
     });
   }
   return 0;
+});
+
+// eslint-disable-next-line func-names
+// eslint-disable-next-line prefer-arrow-callback
+RestaurantSchema.virtual('isClosed').get(function () {
+  const timeFormat = 'HH:mm:ss';
+  const currentTime = moment();
+  const openingTime = moment(this.openingTime, timeFormat);
+  const closingTime = moment(this.closingTime, timeFormat);
+
+  if (currentTime.isBetween(openingTime, closingTime)) {
+    return false;
+  }
+  return true;
 });
 /**
   Database logic should be encapsulated within the data model. Mongoose provides
@@ -224,7 +239,7 @@ RestaurantSchema.statics = {
           select: 'area slug',
         },
       })
-      .select('name slug totalRating openingTime closingTime')
+      .select('name slug totalRating openingTime closingTime logo')
       .exec();
     return result;
   },

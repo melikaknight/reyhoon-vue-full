@@ -7,6 +7,8 @@ function list(req, res, next) {
   const {
     featured,
     citySlug,
+    areaSlug,
+    countsOnly,
   } = req.query;
 
   FoodType.list().then(
@@ -15,6 +17,8 @@ function list(req, res, next) {
         foodTypes, {
           featured,
           citySlug,
+          areaSlug,
+          countsOnly,
           // eslint-disable-next-line function-paren-newline
         });
       return res.json(result);
