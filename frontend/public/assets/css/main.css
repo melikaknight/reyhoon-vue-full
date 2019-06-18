@@ -518,6 +518,10 @@
   transition: 0.4s;
   -webkit-transition: 0.4s;
 }
+span {
+  display: inline-block;
+  margin: 0 3px;
+}
 .restaurant-card-primary:hover {
   box-shadow: 0 3px 15px #cbcbcb;
 }
@@ -593,6 +597,13 @@
   border-bottom: 1px solid #ddd;
   padding-bottom: 1rem;
 }
+.restaurant-search-cover {
+  overflow: hidden;
+  margin-bottom: 0rem;
+  margin-top: 4rem;
+  height: 100%;
+  background-color: #eee;
+}
 .food-item-actions {
   display: flex;
   flex-direction: column;
@@ -620,7 +631,194 @@
   transition: 0.4s;
   -webkit-transition: 0.4s;
 }
+.restaurant-search-title {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.restaurant-search-filters-container {
+  background: #fff;
+  padding: 1rem 0;
+  /* border-radius: 5px;
+  background: #fff; */
+}
+.restaurant-search-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-search-resault-container {
+  display: flex;
+  margin: 3rem auto;
+  padding: 0 4rem;
+}
+.restaurant-search-result-filters-container {
+  flex-basis: 20%;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+}
+.restaurant-search-filters-header {
+  font-size: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding-right: 13px;
+  padding-bottom: 10px;
+}
+.restaurant-search-filters-input {
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  cursor: text;
+  background-color: #fafafa;
+  width: 95%;
+  height: 38px;
+  font-size: 14px;
+  padding-right: 5px;
+  font-family: Shabnam;
+  margin-bottom: 10px;
+}
+.restaurant-search-filters-checkbox {
+  width: 100%;
+  margin-top: 7px;
+  padding: 7px 0;
+  border-bottom: 1px solid #ddd;
+}
+.restaurant-search-results-container {
+  flex-basis: 79%;
+  margin-right: auto;
+}
+.restaurant-search-input-container {
+  position: relative;
+}
+.restaurant-search-results-empty button {
+  min-width: 5rem;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 2rem;
+  display: inline-block;
+  min-height: 2rem;
+  border: 0;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  background-color: #d40062;
+  font-family: Shabnam;
+}
+.restaurant-card-two-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: .4rem;
+  box-shadow: 0 0 0.4rem rgba(0,0,0,.12);
+  background-color: #fff;
+  border: .1rem solid transparent;
+  transition: box-shadow .3s,-webkit-box-shadow .3s;
+}
+.restaurant-card-two-container.closed,
+.restaurant-card-two-container.closed .restaurant-card-two-footer,
+.restaurant-card-two-container.closed .restaurant-card-two-header {
+  background-color: #efefef;
+}
+.restaurant-card-two-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #fff;
+  padding: 1rem;
+}
+.restaurant-card-two-logo {
+  margin-top: 1rem;
+  width: 4rem;
+}
+.restaurant-card-two-info {
+  margin-right: 1rem;
+  color: #000;
+}
+.restaurant-card-two-rating > span{
+  color: #ffd055;
+}
+.restaurant-card-two-rating p{
+  margin: 8px 0;
+}
+.restaurant-card-two-rating .best-restaurants-services {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.restaurant-card-two-rating .best-restaurants-services span{
+  color: #444;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  font-size: 12px;
+}
+.restaurant-card-two-rating .best-restaurants-services p{
+  margin-bottom: 0;
+}
+.restaurant-card-two-rating .best-restaurants-services span:not(:last-child):after {
+  background-color: #444;
+  content: "";
+  left: -6px;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  height: 6px;
+  width: 6px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.restaurant-card-two-footer {
+  text-align: center;
+  background: #fafafa;
+  padding: .5rem 0;
+}
+.restaurant-card-two-footer button{
+  background-color: #fff;
+    border: 1px solid #c40073;
+    border-radius: 35px;
+    color: #c40073;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Shabnam;
+    outline: none;
+    padding: 5px 25px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+.restaurant-card-two-footer button[disabled] {
+  background-color: #efefef;
+  margin-bottom: 1rem;
+}
+.restaurant-search-input {
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  font-family: Shabnam;
+  font-size: 16px;
+  height: 40px;
+  padding-right: 45px;
+  width: 100%;
+}
+.restaurant-search-input-container:before {
+  color: #e2e2e2;
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  right: 11px;
+  top: 6px;
+  text-decoration: inherit;
+}
 
+.pretty .state label:after, .pretty .state label:before,
+.pretty.p-svg .state .svg {
+  left: unset;
+  right: 0;
+}
 /*---------------------------------------------------
         Tehran Restaurants
 -----------------------------------------------------*/

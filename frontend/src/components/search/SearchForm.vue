@@ -28,9 +28,10 @@
             @item-selected="itemSelected"
             @update-items='update'
           />
-          <button 
+          <button
+            :disabled="searchHistory.length === 0"
             type="submit" 
-            @click.prevent="filterCityAreas(searchInput.searchTerm)"
+            @click.prevent="searchButtonClickHandler"
           >
             <i class="fa fa-search"></i>
           </button>
@@ -150,17 +151,29 @@
       update (searchTerm) {
         this.searchInput.searchTerm = searchTerm;
       },
-      itemSelected({area}){
+      itemSelected({area, slug}){
         this.searchHistory.push({
             city: this.cityOptions.find(
               ({value}) => value === this.selectedCity
             ).text,
+            citySlug: this.selectedCity,
             area,
+            areaSlug: slug,
           },
         );
         if (this.searchHistory.length >= 3) {
           this.searchHistory.shift();
         }
+      },
+      searchButtonClickHandler(){
+        const searchHistoryLength = this.searchHistory.length;
+        this.$router.push({ 
+          name: 'restaurantSearch', 
+          params: { 
+            citySlug: this.searchHistory[searchHistoryLength - 1].citySlug,
+            areaSlug: this.searchHistory[searchHistoryLength - 1].areaSlug,
+          },
+        });
       }
     }
   }

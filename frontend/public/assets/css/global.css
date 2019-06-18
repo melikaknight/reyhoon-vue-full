@@ -288,6 +288,9 @@ p {
   top: 0;
   width: 55px;
 }
+.header .search-state-form .row > div.col-80 button[disabled="disabled"]{
+  background-image: unset;
+}
 .header .search-state-form .row > div.col-80:before {
   color: #e2e2e2;
   content: "";

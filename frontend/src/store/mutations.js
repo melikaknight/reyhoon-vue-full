@@ -23,6 +23,26 @@ const mutations = {
   },
   SET_FOOD_TYPES(state, { foodTypes }) {
     state.foodTypes = foodTypes;
+  },
+  SET_FOOD_TYPES_BY_AREA(state, { foodTypes }) {
+    const result = foodTypes.map(foodType => ({
+      ...foodType,
+      selected: false,
+    }));
+    state.foodTypesByArea = result;
+  },
+  SET_AREA_RESTAURANTS(state, { areaRestaurants }) {
+    state.areaRestaurants = areaRestaurants;
+  },
+  SET_FILTERED_AREA_RESTAURANTS(state, { filteredAreaRestaurants }) {
+    state.filteredAreaRestaurants = filteredAreaRestaurants;
+  },
+  TOGGLE_FOOD_TYPES_SELECTION(state, selectedFoodTypes){
+    const foodTypes = state.foodTypesByArea.map(foodType => ({
+      ...foodType,
+      selected: selectedFoodTypes.includes(foodType.slug)
+    }));
+    state.foodTypesByArea = foodTypes;
   }
 };
 

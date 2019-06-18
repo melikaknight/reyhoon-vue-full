@@ -20,7 +20,7 @@ const routes = [
     },
   },
   {
-    path: '/restaurants',
+    path: '/:citySlug/:areaSlug',
     name: 'restaurantSearch',
     component: RestaurantsSearch,
     meta: {

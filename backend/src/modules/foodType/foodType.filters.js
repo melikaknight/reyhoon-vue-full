@@ -40,6 +40,21 @@ const filterCityRestaurants = async (foodTypesWithRestaurants, citySlug) => {
   return filteredCityRestaurants;
 };
 
+const filterCityRestaurantsByArea = async (foodTypesWithCityRestaurants, areaSlug) => {
+  // debugger;
+  const foodTypesFilteredByArea = foodTypesWithCityRestaurants.map((foodType) => {
+    const filteredRestaurants = foodType.restaurants.filter(
+      restaurant => restaurant.address.area.slug === areaSlug
+    );
+    return {
+      ...foodType,
+      restaurants: filteredRestaurants,
+      restaurantsCount: filteredRestaurants.length,
+    };
+  });
+  return foodTypesFilteredByArea;
+};
+
 const addRestaurantsByFoodType = async (foodTypes) => {
   const foodTypesWithRestaurants = await foodTypes.map(async (foodType) => {
     const restaurants = await Restaurant.getByFoodType(foodType._id);
@@ -51,6 +66,14 @@ const addRestaurantsByFoodType = async (foodTypes) => {
   return Promise.all(foodTypesWithRestaurants);
 };
 
+const filterOutRestaurants = async (filteredResults) => {
+  const foodTypesWithOnlyCounts = filteredResults.map(foodType => ({
+    ...foodType,
+    restaurants: [],
+  }));
+  return foodTypesWithOnlyCounts;
+};
+
 // Function to filter the collection of restaurants based on
 // passed filters(area, categoreis, ...)
 const filterFoodTypes = async (foodTypes, options) => {
@@ -58,6 +81,8 @@ const filterFoodTypes = async (foodTypes, options) => {
   const {
     featured,
     citySlug,
+    areaSlug,
+    countsOnly,
   } = options;
   // eslint-disable-next-line prefer-const
   filteredResults = (featured)
@@ -67,6 +92,14 @@ const filterFoodTypes = async (foodTypes, options) => {
 
   filteredResults = (citySlug)
     ? await filterCityRestaurants(filteredResults, citySlug)
+    : filteredResults;
+
+  filteredResults = (areaSlug)
+    ? await filterCityRestaurantsByArea(filteredResults, areaSlug)
+    : filteredResults;
+
+  filteredResults = (parseBool(countsOnly))
+    ? await filterOutRestaurants(filteredResults)
     : filteredResults;
   return filteredResults;
 };
