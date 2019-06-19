@@ -84,7 +84,66 @@
           </fragment>
         </div>
       </div>
-      
+      <div class="restaurant-search-results-container">
+        <fragment v-if="restaurantsCount">
+          <row v-show="openRestaurantsCount">
+            <column
+              width="50"
+              v-for="(restaurant, index) in openRestaurants"
+              :key="index"
+            >
+              <restaurant-card-two
+                :name="restaurant.name"
+                :slug="restaurant.slug"
+                :logo="restaurant.logo"
+                :foodTypes="restaurant.foodTypes"
+                :averageRating="restaurant.totalRating.averageRating"
+                :commentsCount="restaurant.comments.length"
+                :address="restaurant.address.address"
+              />
+            </column>
+          </row>
+          <row v-show="closedRestaurantsCount">
+            <column width="100">
+              <h3> رستوران های بسته </h3>
+            </column>
+            <column
+              width="50"
+              v-for="(restaurant, index) in closedRestaurants"
+              :key="index"
+            >
+              <restaurant-card-two
+                :name="restaurant.name"
+                :slug="restaurant.slug"
+                :logo="restaurant.logo"
+                :foodTypes="restaurant.foodTypes"
+                :averageRating="restaurant.totalRating.averageRating"
+                :commentsCount="restaurant.comments.length"
+                :address="restaurant.address.address"
+                :isClosed="restaurant.isClosed"
+                :openingTime="restaurant.openingTime"
+              />
+            </column>
+          </row>
+        </fragment>
+        <row 
+          v-else
+        >
+          <column width="100" class="text-center">
+            <div class="restaurant-search-results-empty">
+              <img src="/assets/images/empty-results-1x.png">
+              <p>
+                رستورانی با این مشخصات یافت نشد. برای دیدن نتایج، محدوده یا فیلتر های خود را تغییر دهید.
+              </p>
+              <button
+                @click.prevent="clearFilters()"
+              >
+                حذف فیلتر ها
+              </button>
+            </div>
+          </column>
+        </row>
+      </div>
     </div>
   </section>
 </template>
