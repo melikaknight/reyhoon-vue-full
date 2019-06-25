@@ -54,5 +54,12 @@
     "featured": true,
     "cardImageUrl": "/assets/images/foods/kebab_card.jpeg",
     "coverImageUrl": "/assets/images/foods/kebab_cover.jpeg"
+  },
+  {
+    "foodType": "پاستا",
+    "slug": "pasta",
+    "featured": true,
+    "cardImageUrl": "/assets/images/foods/pasta_card.jpeg",
+    "coverImageUrl": "/assets/images/foods/pasta_cover.jpeg"
   }
 ]
