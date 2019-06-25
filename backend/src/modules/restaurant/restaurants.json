@@ -123,5 +123,19 @@
     "foodTypes": [
       "kabab"
     ]
+  },
+  {
+    "name": "آشپزخانه سفید",
+    "slug": "ashpazkhane-sefid",
+    "address": "اصفهان، خیابان سهروردی، خیابان رودکی، کوچه مسجد ائمه اطهار",
+    "area": "naghshe-jahan",
+    "logo": "/assets/images/logos/sefid-esfahan.jpeg",
+    "coverImage": "/assets/images/covers/iranian-food-restaurant.jpeg",
+    "openingTime": "10:00",
+    "closingTime": "15:30",
+    "foodTypes": [
+      "sandwich",
+      "pasta"
+    ]
   }
 ]

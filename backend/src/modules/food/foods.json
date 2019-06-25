@@ -142,5 +142,29 @@
     "foodType": "stew",
     "restaurant": "bijan",
     "image_url": ""
+  },
+  {
+    "name": "پاستا پنه آلفردو",
+    "price": "28000",
+    "ingredients": "",
+    "foodType": "pasta",
+    "restaurant": "ashpazkhane-sefid",
+    "image_url": ""
+  },
+  {
+    "name": "پاستا پنه آلفردو",
+    "price": "28000",
+    "ingredients": "مرغ گریل، خامه",
+    "foodType": "pasta",
+    "restaurant": "ashpazkhane-sefid",
+    "image_url": ""
+  },
+  {
+    "name": "اسلایدر بیکن",
+    "price": "24000",
+    "ingredients": "",
+    "foodType": "sandwich",
+    "restaurant": "ashpazkhane-sefid",
+    "image_url": ""
   }
 ]
