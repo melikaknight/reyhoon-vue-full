@@ -6,5 +6,9 @@
   {
     "city": "شیراز",
     "slug": "shiraz"
+  },
+  {
+    "city": "اصفهان",
+    "slug": "esfahan"
   }
 ]
