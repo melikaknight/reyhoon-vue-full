@@ -58,7 +58,7 @@
   {
     "foodType": "پاستا",
     "slug": "pasta",
-    "featured": true,
+    "featured": false,
     "cardImageUrl": "/assets/images/foods/pasta_card.jpeg",
     "coverImageUrl": "/assets/images/foods/pasta_cover.jpeg"
   }

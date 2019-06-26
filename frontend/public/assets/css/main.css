@@ -22,6 +22,7 @@
   flex-direction: column;
   text-align: center;
   border-radius: 10px;
+  min-height: 16rem;
 }
 .guide-box .guide-box-img i {
   background-image: linear-gradient(to top right, #ff0614, #8c00af);
@@ -408,10 +409,15 @@
 .restaurant-food-type-navigation-item .scrollactive-item.is-active {
   margin-right: 10px;
 }
+.scrollactive-item.is-active {
+  color: black;
+}
 .restaurant-food-type-navigation-item a,
 .restaurant-navigation-item a{
   transition: all .6s;
+  color: #777;
 }
+
 .restaurant-food-type-navigation-link {
 
 }
@@ -574,7 +580,12 @@ span {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  transition: all .3s;
 }
+.food-item-container:hover {
+  box-shadow: 0 0.3rem 2rem rgba(0,0,0,.2);
+}
+
 .food-item-info {
   display: flex;
   justify-content: space-between;
@@ -630,6 +641,10 @@ span {
   padding: 5px 25px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
+}
+.food-item-add-to-cart:hover {
+  background-color: #d40062;
+  color: #fff;
 }
 .restaurant-search-title {
   border-bottom: 1px solid #ddd;
@@ -715,18 +730,23 @@ span {
   box-shadow: 0 0 0.4rem rgba(0,0,0,.12);
   background-color: #fff;
   border: .1rem solid transparent;
-  transition: box-shadow .3s,-webkit-box-shadow .3s;
+  transition: all .3s;
 }
-.restaurant-card-two-container.closed,
-.restaurant-card-two-container.closed .restaurant-card-two-footer,
-.restaurant-card-two-container.closed .restaurant-card-two-header {
+.restaurant-card-two-container:hover {
+  box-shadow: 0 0.3rem 2rem rgba(0,0,0,.2);
+}
+.restaurant-card-two-container.closed {
   background-color: #efefef;
+}
+
+.restaurant-card-two-container.closed:hover {
+  background-color: #e3e2e2;
 }
 .restaurant-card-two-header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background: #fff;
+  background: inherit;
   padding: 1rem;
 }
 .restaurant-card-two-logo {
@@ -768,6 +788,9 @@ span {
   width: 6px;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+}
+.restaurant-card-two-container.closed .restaurant-card-two-footer {
+  background: inherit;
 }
 .restaurant-card-two-footer {
   text-align: center;
