@@ -1,0 +1,8 @@
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+  primary: #d40062, // The primary color of your brand
+  accent: #777 // The secondary color of your brand
+));
+
+@import "~vue-material/dist/components/MdField/theme"; 

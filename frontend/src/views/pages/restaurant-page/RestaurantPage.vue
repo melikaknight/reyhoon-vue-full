@@ -8,6 +8,19 @@
           :alt="restaurant.name" 
           class="restaurant-cover-image"
         >
+        <nav class="restaurant-top-navigation-container">
+          <div class="restaurant-top-navigation">
+            <bread-crumb 
+              :cityAreaPath="backButtonPath"
+              :cityAreaLabel="cityAreaLabel"
+              :restaurantName="restaurant.name"
+            />
+            <back-button 
+              :path="backButtonPath"
+              label="رستوران ها"
+            />
+          </div>
+        </nav>
       </div>
       <div class="restaurant-card">
         <restaurant-card-primary
@@ -82,13 +95,10 @@
           </div>
         </div>
         <div class="restaurant-menu-search-container">
-          <input 
-            type="text" 
-            name="s" 
-            placeholder="مثلا چلوکباب"
-            v-model="searchInput"
-          >
-          <button type="submit"><i class="fa fa-search"></i></button>
+          <md-field md-inline md-clearable>
+            <label>{{ searchInputLabel }}</label>
+            <md-input v-model="searchInput" @focus="handleFocus" @focusout="handleFocusOut"></md-input>
+          </md-field>
         </div>
         <div class="restaurant-food-type-menu-container">
           <row
@@ -189,12 +199,15 @@
   import RestaurantInfoCard from '@/components/restaurant/RestaurantInfoCard.vue';
   import RestaurantRatingCard from '@/components/restaurant/RestaurantRatingCard.vue';
   import CommentCard from '@/components/comment/CommentCard.vue';
+  import BackButton from '@/components/navigations/BackButton.vue';
+  import BreadCrumb from '@/components/navigations/BreadCrumb.vue';
 
   export default {
     name: "RestaurantPage",
     data: () => ({
       pageContent,
       searchInput: "",
+      searchInputLabel: "جستجو در منوی این رستوران",
     }),
     components: {
       RestaurantCardPrimary,
@@ -202,6 +215,8 @@
       RestaurantInfoCard,
       RestaurantRatingCard,
       CommentCard,
+      BackButton,
+      BreadCrumb,
     },
     computed: {
       ...mapGetters({
@@ -224,8 +239,6 @@
               }
               return false;
             }); 
-            // menuItem.foodType._id === foodType._id
-            // );
             return {
               foodType: foodType.foodType,
               _id: foodType._id,
@@ -234,6 +247,30 @@
           });
         }
         return [];
+      },
+      backButtonPath() {
+        if (this.restaurant) {
+          const citySlug = this.restaurant.address.area.city.slug;
+          const areaSlug = this.restaurant.address.area.slug;
+          return `/${citySlug}/${areaSlug}`;
+        }
+        return '/';
+      },
+      cityAreaLabel() {
+        if (this.restaurant) {
+          const city = this.restaurant.address.area.city.city;
+          const area = this.restaurant.address.area.area;
+          return `${city}، ${area}`;
+        }
+        return '';
+      },
+    },
+    methods: {
+      handleFocus() {
+        this.searchInputLabel = "مثلا چلو کباب";
+      },
+      handleFocusOut() {
+        this.searchInputLabel = "جستجو در منوی این رستوران"
       }
     }
   }

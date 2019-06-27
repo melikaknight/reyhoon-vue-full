@@ -26,9 +26,6 @@
   import RestaurantCardOne from '@/components/restaurant/RestaurantCardOne.vue';
   export default {
     name: "BestRestaurantsSection",
-    created() {
-      this.$store.dispatch('getCityRestaurants', 'tehran');
-    },
     data: () => ({
       
     }),

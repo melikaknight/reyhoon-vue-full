@@ -2,7 +2,7 @@
   <div class="food-item-container">
     <div class="food-item-info">
       <h3> {{ name }} </h3>
-      <h3> {{ price | currency }} </h3>
+      <h3 class="en-number"> {{ price | currency }} <span>تومان</span></h3>
     </div>
     <div class="food-item-details">
       <div class="food-item-actions">
@@ -10,9 +10,6 @@
           {{ ingredients }}
         </p>
         <button class="food-item-add-to-cart">
-          <!-- <span class="food-item-action-icon">
-            +
-          </span> -->
           <span class="food-item-action-title">
             افزودن به سبد خرید
           </span>
