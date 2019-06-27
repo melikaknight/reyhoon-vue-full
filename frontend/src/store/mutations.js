@@ -43,6 +43,12 @@ const mutations = {
       selected: selectedFoodTypes.includes(foodType.slug)
     }));
     state.foodTypesByArea = foodTypes;
+  },
+  PUSH_SEARCH_HISTORY(state, searchHistory) {
+    state.searchHistory.push(searchHistory);
+    if (state.searchHistory.length >= 3) {
+      state.searchHistory.shift();
+    }
   }
 };
 

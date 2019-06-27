@@ -18,7 +18,7 @@ html {
 
 body {
   direction: rtl;
-  font-family: Shabnam, "Open Sans";
+  font-family: Shabnam, "Open Sans" !important;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -137,7 +137,7 @@ p {
 .food-tags {
   background-color: #fff;
   border-radius: 35px;
-  color: #000;
+  color: #000 !important;
   display: inline-block;
   font-size: 20px;
   margin: 8px;
@@ -183,7 +183,7 @@ p {
   margin-left: 40px;
 }
 .mj-nav ul li a {
-  color: #4a4a4a;
+  color: #4a4a4a !important;
   display: inline-block;
   font-size: 14px;
   transition: 0.4s;
@@ -289,7 +289,7 @@ p {
   width: 55px;
 }
 .header .search-state-form .row > div.col-80 button[disabled="disabled"]{
-  background-image: unset;
+  background-image: linear-gradient(to top right, #979393, #b0aab2);
 }
 .header .search-state-form .row > div.col-80:before {
   color: #e2e2e2;
@@ -302,6 +302,7 @@ p {
   right: 20px;
   top: 12px;
   text-decoration: inherit;
+  z-index: 200;
 }
 .header .search-state-form .row > div.col-80:after {
   background-color: #fff;
@@ -317,7 +318,7 @@ p {
   background-color: #fff;
   border: 1px solid #ececec;
   border-radius: 5px;
-  font-family: Shabnam;
+  font-family: Shabnam !important;
   font-size: 18px;
   height: 55px;
   padding-right: 45px;
@@ -330,7 +331,7 @@ p {
   background-color: #fff;
   border: 1px solid #ececec;
   border-radius: 5px;
-  font-family: Shabnam;
+  font-family: Shabnam !important;
   font-size: 18px;
   height: 55px;
   text-align: center !important;
@@ -349,7 +350,7 @@ p {
   background-color: #202020;
 }
 .footer .footer-a a {
-  color: #9b9b9b;
+  color: #9b9b9b !important;
   display: block;
   font-size: 14px;
   margin-bottom: 8px;
@@ -368,7 +369,7 @@ p {
   font-size: 14px;
 }
 .footer .footer-a .col-33 a {
-  color: #5890ff;
+  color: #5890ff !important;
 }
 .footer .footer-a .col-66 {
   width: 66.66%;

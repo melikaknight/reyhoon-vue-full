@@ -11,8 +11,10 @@ import 'moment/locale/fa';
 import VueCurrencyFilter from 'vue-currency-filter'
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import 'pretty-checkbox/dist/pretty-checkbox.min.css';
-
-// @import '~pretty-checkbox/src/pretty-checkbox.scss';
+import { MdField, MdButton } from 'vue-material/dist/components';
+import 'vue-material/dist/vue-material.min.css';
+// import 'vue-material/dist/theme/default-dark.css'
+require('@/assets/theme.scss');
 // importing component CSS
 import 'v-autocomplete/dist/v-autocomplete.css';
 
@@ -23,11 +25,12 @@ import Icon from '@/components/elements/Icon.vue';
 
 Vue.use(Sticky)
 Vue.use(Plugin);
+Vue.use(MdField);
+Vue.use(MdButton);
 Vue.use(VueMoment, {
   moment,
 });
 Vue.use(VueCurrencyFilter, {
-  symbol : 'تومان',
   thousandsSeparator: '.',
   fractionCount: 0,
   fractionSeparator: ',',

@@ -6,8 +6,8 @@
         <column 
           width="25" 
           class="mb-5"
-          v-for="(restaurant,index) in cityRestaurants"
-          :key="index"
+          v-for="restaurant in cityRestaurants"
+          :key="restaurant.name"
         >
           <restaurant-minimal
             :name="restaurant.name"

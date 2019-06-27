@@ -12,6 +12,7 @@ const state = {
   filteredAreaRestaurants: [],
   foodTypes: [],
   foodTypesByArea: [],
+  searchHistory: [],
 };
 
 export default state;

@@ -11,7 +11,7 @@
     </router-link>
     <div class="restaurant-card-primary-rating">
       
-      <span>{{averageRating}}</span>
+      <span class="star-rating-comments-count">({{ comments.length }})</span>
       <div class="star-rating">
         <star-rating 
           :rating="averageRating" 
@@ -22,11 +22,11 @@
           :border-width="4" 
           border-color="#d8d8d8" 
           :rounded-corners="true" 
-          :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]">
+          :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
         >
         </star-rating>
       </div>
-      <span>({{ comments.length }})</span>
+      <span class="star-rating-average">{{averageRating}}</span>
     </div>
     <div class="restaurant-card-primary-services mb-2 mt-2">
       <span 
@@ -61,6 +61,7 @@
       },
       comments: {
         type: Array,
+        // eslint-disable-next-line
         default: [],
       },
       averageRating: {
@@ -69,6 +70,7 @@
       },
       address: {
         type: Object,
+        // eslint-disable-next-line
         default: {},
       },
     },

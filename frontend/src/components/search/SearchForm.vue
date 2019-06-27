@@ -46,17 +46,18 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+  import { mapGetters, mapState } from 'vuex';
   import SearchSuggestionTemplate from './SearchSuggestion.vue';
   export default {
     name: "SearchForm",
     created(){
       this.filterCityAreas();
+      this.selectedCity = this.selectedCityState;
     },
     data: () => ({
       selectedCity: "tehran",
       selectedArea: null,
-      searchHistory: [],
+      // searchHistory: [],
       searchInput: {
         items: [],
         searchTerm: "",
@@ -86,6 +87,10 @@
       }
     },
     computed: {
+      ...mapState({
+        selectedCityState: 'selectedCity',
+        searchHistory: 'searchHistory',
+      }),
       ...mapGetters({
         cities: 'citiesGetter',
         cityBySlugGetter: 'cityBySlugGetter',
@@ -152,18 +157,26 @@
         this.searchInput.searchTerm = searchTerm;
       },
       itemSelected({area, slug}){
-        this.searchHistory.push({
-            city: this.cityOptions.find(
-              ({value}) => value === this.selectedCity
-            ).text,
-            citySlug: this.selectedCity,
-            area,
-            areaSlug: slug,
-          },
-        );
-        if (this.searchHistory.length >= 3) {
-          this.searchHistory.shift();
-        }
+        this.$store.commit('PUSH_SEARCH_HISTORY', {
+          city: this.cityOptions.find(
+            ({value}) => value === this.selectedCity
+          ).text,
+          citySlug: this.selectedCity,
+          area,
+          areaSlug: slug,
+        });
+        // this.searchHistory.push({
+        //     city: this.cityOptions.find(
+        //       ({value}) => value === this.selectedCity
+        //     ).text,
+        //     citySlug: this.selectedCity,
+        //     area,
+        //     areaSlug: slug,
+        //   },
+        // );
+        // if (this.searchHistory.length >= 3) {
+        //   this.searchHistory.shift();
+        // }
       },
       searchButtonClickHandler(){
         const searchHistoryLength = this.searchHistory.length;

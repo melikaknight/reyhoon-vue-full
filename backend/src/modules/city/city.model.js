@@ -59,15 +59,18 @@ CitySchema.statics = {
             {
               path: 'address',
               select: 'address',
+              populate: {
+                path: 'area',
+                select: 'area slug',
+                populate: {
+                  path: 'city',
+                  select: 'slug city',
+                },
+              },
             },
             {
               path: 'foodTypes',
               select: 'foodType slug',
-              // options: {
-              //   sort: {
-              //     foodType: 1,
-              //   },
-              // },
             },
             {
               path: 'comments',
@@ -84,11 +87,6 @@ CitySchema.statics = {
                 path: 'foodType',
                 select: 'foodType _id',
               },
-              // options: {
-              //   sort: {
-              //     'foodType.foodType': 1,
-              //   },
-              // },
             },
           ],
         },
