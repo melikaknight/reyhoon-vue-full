@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="foodTypeUrl">
+  <router-link to="#">
     <div class="what-food-box">
       <img 
         :src="cardImageUrl" 

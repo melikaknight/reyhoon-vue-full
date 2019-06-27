@@ -42,6 +42,7 @@ p {
 
 .main-title {
   font-size: 32px;
+  line-height: 1.3;
 }
 
 .main-subtitle {
@@ -53,7 +54,7 @@ p {
 }
 
 .container {
-  padding: 50px 105px;
+  padding: 20px 105px;
 }
 
 .row {
@@ -221,7 +222,7 @@ p {
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   position: relative;
-  width: 860px;
+  width: 80%;
 }
 .header .search-state-form .last-search {
   color: #777;
@@ -302,7 +303,7 @@ p {
   right: 20px;
   top: 12px;
   text-decoration: inherit;
-  z-index: 200;
+  z-index: 16;
 }
 .header .search-state-form .row > div.col-80:after {
   background-color: #fff;

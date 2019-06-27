@@ -2,11 +2,68 @@
         Responsive
 ------------------------------------------------------------------------------*/
 @media screen and (max-width: 992px) {
+  .top-restaurants-boxes {
+    width: 60%;
+  }
+  .restaurant-top-navigation {
+    width: 90%;
+  }
+  .restaurant-menu-sticky-container,
+  .restaurant-menu-search-container,
+  .restaurant-card,
+  .restaurant-food-type-menu-container,
+  .restaurant-info-container, 
+  .restaurant-comments-container{
+    width: 95%;
+  }
+  .restaurant-food-type-navigation.vue-sticky-el {
+    display: none;
+  }
+  .restaurant-food-type-navigation.vue-sticky-el.top-sticky {
+    display: block;
+  }
+  .restaurant-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurant-food-type-container {
+    max-width: unset;
+    margin-right: 0;
+  }
+  .restaurant-food-type-navigation {
+    margin-top: 5rem;
+  }
+  .restaurant-food-type-navigation .scrollactive-nav {
+    display: flex;
+    background-color: #eee;
+  }
+  .restaurant-food-type-navigation-item {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .restaurant-food-type-navigation-item .scrollactive-item {
+    display: none;
+  }
+  .restaurant-food-type-navigation-item .scrollactive-item.is-active{
+    display: block;
+  }
+  .restaurant-food-type-navigation-item .scrollactive-item.is-active:before{
+    display: none;
+  }
+  .restaurant-search-resault-container {
+    padding: 0 1rem;
+  }
   .mj-nav, .container, .footer .footer-b {
     padding-left: 50px;
     padding-right: 50px;
   }
-
+  .header .search-state-form select {
+    padding-left: 0px;
+    padding-right: 10px;
+  }
   .header {
 	background-image: none;
   }
@@ -40,19 +97,64 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 960px) {
+  .header .search-state-form select {
+    padding-left: 0px;
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .restaurant-search-results-container .row .col-50{
+    width: 33%;
+  }
+}
 @media screen and (max-width: 768px) {
   .main-title {
     font-size: 28px;
   }
-
+  .breadcrumb-container {
+    display: none !important;
+  }
+  .top-restaurants-boxes {
+    width: 75%;
+  }
+  .restaurant-top-navigation {
+    justify-content: flex-end;
+  }
+  .restaurant-search-result-filters-container {
+    flex-basis: 35%;
+  }
+  .restaurant-search-results-container {
+    flex-basis: 64%;
+  }
   .main-subtitle {
     font-size: 20px;
   }
-
+  .restaurant-search-filters-container .row .col-50,
+  .restaurant-search-results-container .row .col-50 {
+    width: 100%;
+  }
+  .restaurant-search-title {
+    font-size: 12px;
+  }
   .section-title {
     font-size: 18px;
   }
-
+  .guide-box {
+    margin-bottom: 2rem;
+  }
+  .guide h4 {
+    font-size: 14px;
+  }
+  .guide-box .guide-box-desc {
+    font-size: 13px;
+    padding: 0 2rem;
+  }
+  .guide-box .guide-box-img i {
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+  }
   .mj-nav, .container, .footer .footer-b {
     padding-left: 15px;
     padding-right: 15px;
@@ -143,11 +245,24 @@
     padding: 5px 10px;
   }
 }
+@media screen and (max-width: 600px) {
+  .header .search-state-form select {
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 576px) {
+  .col-50 {
+    width: 100%;
+  }
   .main-title {
     font-size: 22px;
   }
-
+  .top-restaurants-boxes {
+    width: 100%;
+  }
+  .top-restaurants .col-25 {
+    width: auto;
+  }
   .main-subtitle {
     font-size: 18px;
   }
@@ -160,17 +275,24 @@
     border-radius: 30px;
     font-size: 16px;
   }
-
+  .what-food-box img {
+    width: 100%;
+    height: 100% !important;
+  }
   .header .search-state-form .row > div.col-20 {
     width: 30%;
   }
   .header .search-state-form .row > div.col-20 select {
-	padding-left: 20%;
+    padding-left: 20%;
+  }
+  .header .search-state-form .row > div.col-20:after {
+    display: none;
   }
   .header .search-state-form .row > div.col-20:before {
     font-size: 22px;
     padding: 0;
-    right: 20px;
+    right: unset;
+    left: 9px;
     top: 9px;
   }
   .header .search-state-form .row > div.col-80 {
