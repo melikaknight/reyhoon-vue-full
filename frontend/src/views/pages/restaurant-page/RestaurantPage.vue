@@ -67,6 +67,12 @@
         class="restaurant-menu-container" 
         sticky-container
       >
+        <div class="restaurant-menu-search-container">
+          <md-field md-inline md-clearable>
+            <label>{{ searchInputLabel }}</label>
+            <md-input v-model="searchInput" @focus="handleFocus" @focusout="handleFocusOut"></md-input>
+          </md-field>
+        </div>
         <div class="restaurant-food-type-container">
           <div 
             v-sticky  
@@ -94,12 +100,6 @@
             </scrollactive>
           </div>
         </div>
-        <div class="restaurant-menu-search-container">
-          <md-field md-inline md-clearable>
-            <label>{{ searchInputLabel }}</label>
-            <md-input v-model="searchInput" @focus="handleFocus" @focusout="handleFocusOut"></md-input>
-          </md-field>
-        </div>
         <div class="restaurant-food-type-menu-container">
           <row
             v-for="(foodType, index) in menuGroupByFoodType"
@@ -123,7 +123,6 @@
                   :name="foodItem.name"
                   :price="foodItem.price"
                   :ingredients="foodItem.ingredients"
-                  :image="foodItem.image_url"
                 />
               </column>
             </fragment>

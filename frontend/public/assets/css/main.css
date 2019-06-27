@@ -178,6 +178,9 @@
   display: block;
   margin: auto;
 }
+/* .restaurant-search-cover  .restaurant-cover-image {
+  height: 100% !important;
+} */
 .restaurant-navigation-container {
   /* position: sticky; */
   /* width: 60%; */
@@ -196,7 +199,7 @@
   margin-left: auto;
   margin-right: auto;
   z-index: 200;
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 .restaurant-navigation {
   display: flex;
@@ -251,7 +254,6 @@
   top: 0;
   display: block;
   z-index: 110;
-  box-shadow: 0 1.7rem 1.4rem -0.8rem rgba(0,0,0,.1);
   margin: 2rem auto;
 }
 .restaurant-section-title {
@@ -372,7 +374,7 @@
   align-self: flex-start;
   background-color: transparent;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .restaurant-navigation-item .scrollactive-item.is-active:before {
   content: "";
@@ -444,7 +446,7 @@
   box-shadow: 0 3px 9px #cbcbcb;
   border-radius: 4px;
   max-width: 100px;
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 .restaurant-card-primary h3 {
   color: #000;
@@ -492,7 +494,7 @@
 .restaurant-card-primary p {
   /* overflow-x: hidden; */
   position: relative;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   font-size: 18px;
 }
 .restaurant-card-primary p:after {
@@ -730,6 +732,7 @@ span {
   background-color: #fff;
   border: .1rem solid transparent;
   transition: all .3s;
+  min-height: 18rem;
 }
 .restaurant-card-two-container:hover {
   box-shadow: 0 0.3rem 2rem rgba(0,0,0,.2);
@@ -762,10 +765,10 @@ span {
 .restaurant-card-two-rating p{
   margin: 8px 0;
 }
-.restaurant-card-two-rating .best-restaurants-services {
+/* .restaurant-card-two-rating .best-restaurants-services {
   overflow-x: hidden;
   white-space: nowrap;
-}
+} */
 .restaurant-card-two-rating .best-restaurants-services span{
   color: #444;
   display: inline-block;
@@ -795,6 +798,7 @@ span {
   text-align: center;
   background: #fafafa;
   padding: .5rem 0;
+  margin-top: auto;
 }
 .restaurant-card-two-footer button{
   background-color: #fff;
@@ -1024,7 +1028,7 @@ span {
 }
 .restaurant-top-navigation-container {
   position: absolute;
-  top: 4rem;
+  top: 3rem;
   width: 100%;
 }
 .restaurant-top-navigation {
