@@ -16,7 +16,6 @@
         </button>
       </div>
       <div class="food-item-image-container">
-        <img :src="imageUrl" :alt="name" class="food-item-image">
       </div>
     </div>
   </div>
@@ -36,17 +35,15 @@
       ingredients: {
         type: String,
       },
-      image: {
-        type: String,
-      },
+    
     },
-    computed: {
-      imageUrl() {
+    /*computed: {
+       imageUrl() {
         return this.image 
           ? this.image
           : '/assets/images/foods/food-outline.png';
       }
-    },
+    },*/
   }
 </script>
 
