@@ -11,7 +11,7 @@
     "setup": "concurrently \"npm run setup:self\" \"npm run setup:client\" \"npm run setup:server\"",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Melika Abdolahi",
+  "author": "Melika Abdollahi",
   "dependencies": {
     "concurrently": "^4.1.0"
   }
