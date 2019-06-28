@@ -56,10 +56,11 @@
           >
           <fragment v-if="filteredFoodTypes.length">
             <div 
-              class="restaurant-search-filters-checkbox"
+              class="restaurant-search-filters-checkbox p-check"
               v-for="(foodType, index) in filteredFoodTypes"
-              :key="index"
+              :key="index" :class="{'selected' : index+1==selectedFoodTypes.length}"
             >
+              
               <p-check 
                 :name="`check-${foodType.slug}`" 
                 color="danger" 
@@ -67,6 +68,7 @@
                 class="p-svg p-curve p-smooth"
                 :value="foodType.slug"
                 :key="`check-${foodType.slug}-${foodType.selected}`"
+                
               >
                 {{ `${foodType.foodType} (${foodType.restaurantsCount})` }}
                 <svg slot="extra" class="svg svg-icon" viewBox="0 0 20 20">
@@ -75,6 +77,7 @@
                   </path>
                 </svg>
               </p-check>
+              
             </div>
           </fragment>
           <fragment v-else>
@@ -150,7 +153,7 @@
 <script>
   import { mapGetters } from 'vuex';
   import RestaurantCardTwo from '@/components/restaurant/RestaurantCardTwo.vue';
-
+  import $ from 'jquery';
   export default {
     name: "RestaurantSearch",
     data: () => ({
@@ -174,7 +177,13 @@
       RestaurantCardTwo,
     },
     watch: {
+      
       selectedFoodTypes(newValue){
+      
+        /*let num = this.selectedFoodTypes.length;
+        $(".restaurant-search-filters-checkbox").removeClass('selected')
+        $($(".restaurant-search-filters-checkbox").get(num-1)).addClass('selected')*/
+      
         this.$store.commit(
           'TOGGLE_FOOD_TYPES_SELECTION',
           newValue
@@ -182,6 +191,7 @@
         this.getFilteredAreaRestaurants();
       },
     },
+
     computed: {
       ...mapGetters([
         'areaRestaurantsGetter',
@@ -249,4 +259,3 @@
     },
   }
 </script>
-

@@ -18,9 +18,6 @@ const FoodSchema = new mongoose.Schema({
   ingredients: {
     type: String,
   },
-  image_url: {
-    type: String,
-  },
   foodType: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'FoodType',

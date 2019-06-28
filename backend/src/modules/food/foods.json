@@ -4,167 +4,146 @@
     "price": "27000",
     "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
     "foodType": "pizza",
-    "restaurant": "lanjin",
-    "image_url": "/assets/images/foods/pizza_card.jpeg"
+    "restaurant": "lanjin"
   },
   {
     "name": "پیتزا 4 فصل",
     "price": "45000",
     "ingredients": "فیله گوساله طعم دار شده، قارچ، فلفل دلمه، پیاز و پنیر موزارلا",
     "foodType": "pizza",
-    "restaurant": "tooba",
-    "image_url": "/assets/images/foods/pizza_card.jpeg"
+    "restaurant": "tooba"
   },
   {
     "name": "پیتزا چیکن",
     "price": "34000",
     "ingredients": "فیله مرغ طعم دار شده، قارچ، فلفل دلمه و پنیز موزارلا",
     "foodType": "pizza",
-    "restaurant": "shen",
-    "image_url": "/assets/images/foods/pizza_card.jpeg"
+    "restaurant": "shen"
   },
   {
     "name": "همبرگر سینگل",
     "price": "21000",
     "ingredients": "",
     "foodType": "burger",
-    "restaurant": "lanjin",
-    "image_url": "/assets/images/foods/burger_card.jpeg"
+    "restaurant": "lanjin"
   },
   {
     "name": "سالاد لانجین",
     "price": "12000",
     "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
     "foodType": "salad",
-    "restaurant": "lanjin",
-    "image_url": "/assets/images/foods/salad_cover.jpeg"
+    "restaurant": "lanjin"
   },
   {
     "name": "ساندویچ مرغ",
     "price": "18500",
     "ingredients": "کاهو، گردو، جعفری تازه و سس مخصوص لانجین",
     "foodType": "sandwich",
-    "restaurant": "lanjin",
-    "image_url": "/assets/images/foods/sandwich_card.jpeg"
+    "restaurant": "lanjin"
   },
   {
     "name": "پلومرغ هندی",
     "price": "35500",
     "ingredients": "",
     "foodType": "irani",
-    "restaurant": "berantin",
-    "image_url": ""
+    "restaurant": "berantin"
   },
   {
     "name": "چلو کباب مخصوص",
     "price": "38000",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "soofi",
-    "image_url": "/assets/images/foods/kebab_card.jpeg"
+    "restaurant": "soofi"
   },
   {
     "name": "چلو کباب مخصوص",
     "price": "28000",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "berantin",
-    "image_url": "/assets/images/foods/kebab_card.jpeg"
+    "restaurant": "berantin"
   },
   {
     "name": "چلو گوشت قشقایی",
     "price": "45000",
     "ingredients": "",
     "foodType": "stew",
-    "restaurant": "berantin",
-    "image_url": ""
-  },
+    "restaurant": "berantin"
+    },
   {
     "name": "چلو خورشت فسنجون",
     "price": "36000",
     "ingredients": "",
     "foodType": "stew",
-    "restaurant": "lidoma",
-    "image_url": ""
+    "restaurant": "lidoma"
   },
   {
     "name": "چلو کباب بختیاری",
     "price": "45000",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "lidoma",
-    "image_url": "/assets/images/foods/kebab_card.jpeg"
+    "restaurant": "lidoma"
   },
   {
     "name": "چیزبرگر مخصوص",
     "price": "18000",
     "ingredients": "",
     "foodType": "burger",
-    "restaurant": "chopchop",
-    "image_url": "/assets/images/foods/burger_card.jpeg"
+    "restaurant": "chopchop"
   },
   {
     "name": "سالاد سزار",
     "price": "12000",
     "ingredients": "",
     "foodType": "salad",
-    "restaurant": "chopchop",
-    "image_url": ""
+    "restaurant": "chopchop"
   },
   {
     "name": "چلو کباب نگینی",
     "price": "25800",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "bamahas",
-    "image_url": "/assets/images/foods/kebab_card.jpeg"
+    "restaurant": "bamahas"
   },
   {
     "name": "جوجه چینی",
     "price": "45000",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "bijan",
-    "image_url": "/assets/images/foods/kebab_card.jpeg"
+    "restaurant": "bijan"
   },
   {
     "name": "جوجه نگینی",
     "price": "47000",
     "ingredients": "",
     "foodType": "kabab",
-    "restaurant": "bijan",
-    "image_url": ""
+    "restaurant": "bijan"
   },
   {
     "name": "چلو خورشت بادمجان",
     "price": "45000",
     "ingredients": "",
     "foodType": "stew",
-    "restaurant": "bijan",
-    "image_url": ""
+    "restaurant": "bijan"
   },
   {
     "name": "پاستا پنه آلفردو",
     "price": "28000",
     "ingredients": "",
     "foodType": "pasta",
-    "restaurant": "ashpazkhane-sefid",
-    "image_url": ""
+    "restaurant": "ashpazkhane-sefid"
   },
   {
     "name": "پاستا پنه آلفردو",
     "price": "28000",
     "ingredients": "مرغ گریل، خامه",
     "foodType": "pasta",
-    "restaurant": "ashpazkhane-sefid",
-    "image_url": ""
+    "restaurant": "ashpazkhane-sefid"
   },
   {
     "name": "اسلایدر بیکن",
     "price": "24000",
     "ingredients": "",
     "foodType": "sandwich",
-    "restaurant": "ashpazkhane-sefid",
-    "image_url": ""
+    "restaurant": "ashpazkhane-sefid"
   }
 ]
