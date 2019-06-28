@@ -1,6 +1,7 @@
 <template>
   <div class="restaurant-rating-card-container">
-    <div class="restaurant-rating-card-total">
+    <div class="restaurant-rating-card-total en-number">
+      <span>({{commentsCount}})</span>
       <div class="star-rating">
         <star-rating 
           :rating="averageRating" 
@@ -15,7 +16,6 @@
         >
         </star-rating>
       </div>
-      <span>({{commentsCount}})</span>
       <h3>{{averageRating}}</h3>
     </div>
     <div class="restaurant-rating-card-detail">
@@ -25,7 +25,7 @@
         class="restaurant-rating-average-container"
       >
         <p>{{ section.title }}</p>
-        <span> {{ section.value }} </span>
+        <span class="en-number"> {{ section.value }} </span>
         <vue-slide-bar
           v-model="section.value"
           :min="0"

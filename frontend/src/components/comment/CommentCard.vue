@@ -2,6 +2,7 @@
   <div class="comment-card-container">
     <div class="comment-card-meta">
       <h3> {{ author }} </h3>
+      <h3 class="en-number">{{averageRating}}</h3>
       <div class="star-rating">
         <star-rating 
           :rating="averageRating" 
@@ -16,7 +17,6 @@
         >
         </star-rating>
       </div>
-      <h3>{{averageRating}}</h3>
     </div>
     <p class="comment-card-comment" v-show="comment">
       <span>

@@ -107,6 +107,12 @@
   .restaurant-search-results-container .row .col-50{
     width: 33%;
   }
+  .restaurant-cover-image {
+    width: 100%;
+  }
+  .header .search-state-form {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-title {
