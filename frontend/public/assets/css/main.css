@@ -626,7 +626,6 @@ span {
   flex-direction: column;
   justify-content: space-between;
   padding: 0 1rem;
-  max-width: 11.5rem;
 }
 .food-item-ingredients {
   font-size: 12px;
@@ -647,6 +646,7 @@ span {
   padding: 5px 25px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
+  width: 10rem;
 }
 .food-item-add-to-cart:hover {
   background-color: #d40062;

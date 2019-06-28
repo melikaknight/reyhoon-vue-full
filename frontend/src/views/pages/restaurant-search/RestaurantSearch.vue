@@ -153,7 +153,6 @@
 <script>
   import { mapGetters } from 'vuex';
   import RestaurantCardTwo from '@/components/restaurant/RestaurantCardTwo.vue';
-  import $ from 'jquery';
   export default {
     name: "RestaurantSearch",
     data: () => ({
