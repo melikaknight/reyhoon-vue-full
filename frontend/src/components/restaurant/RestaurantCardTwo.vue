@@ -13,7 +13,6 @@
         <div class="restaurant-card-two-info">
           <h3 class="section-title">{{ name }}</h3>
           <div class="restaurant-card-two-rating">
-            <span>{{averageRating}}</span>
             <div class="star-rating">
               <star-rating 
                 :rating="averageRating" 
@@ -28,6 +27,7 @@
               >
               </star-rating>
             </div>
+            <span class="en-number">{{averageRating}}</span>
             <div class="best-restaurants-services">
               <span 
                 v-for="(foodType,index) in foodTypesDisplay"

@@ -294,6 +294,7 @@
 }
 .restaurant-rating-average-container{
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -302,10 +303,12 @@
 }
 
 .restaurant-rating-average-container span{
-  margin-right: auto;
+  margin-right: 10px;
   color: #ffbc48;
 }
-
+.restaurant-rating-average-container p {
+  margin-right: auto;
+}
 .restaurant-rating-card-total h3{
   color: #ffd055;
   text-align: center;
@@ -475,6 +478,7 @@
   padding: 0 10px;
   position: relative;
   font-size: 18px;
+  font-weight: 700;
 }
 .restaurant-card-primary .restaurant-card-primary-services span:not(:last-child):after {
   background-color: #444;
@@ -539,9 +543,10 @@ span {
   justify-content: space-between;
   align-items: center;
 }
-.comment-card-meta .star-rating{
+.comment-card-meta .en-number{
   margin-right: auto;
   margin-left: 1rem;
+  color: #ffd055;
 }
 .comment-card-meta .star-rating h3{
   color: #ffc300;
@@ -796,7 +801,7 @@ span {
 }
 .restaurant-card-two-footer {
   text-align: center;
-  background: #fafafa;
+  background: #e3e3e3;
   padding: .5rem 0;
   margin-top: auto;
 }
