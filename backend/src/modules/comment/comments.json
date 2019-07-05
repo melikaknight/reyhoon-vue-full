@@ -118,5 +118,61 @@
     "packaging": "2.5",
     "deliveryTime": "5",
     "comment": "تست"
+  },
+  {
+    "author": "fariba",
+    "restaurant": "continer",
+    "quality": "4",
+    "packaging": "2.5",
+    "deliveryTime": "5",
+    "comment": "حجم غذا خیلی کم بود"
+  },
+  {
+    "author": "mohammad",
+    "restaurant": "continer",
+    "quality": "4.6",
+    "packaging": "3.8",
+    "deliveryTime": "4.8",
+    "comment": "اول یک ساندویچ را کم فرستادند و بعد از خوردن متوجه شدم بجای ساندویچ مرغ و پنیر خامه ای ساندویچ کرفس تحویل دادند"
+  },
+  {
+    "author": "arsalan",
+    "restaurant": "continer",
+    "quality": "4.3",
+    "packaging": "4.5",
+    "deliveryTime": "5",
+    "comment": "غذا خوب بود"
+  },
+  {
+    "author": "donya",
+    "restaurant": "nimkat",
+    "quality": "4",
+    "packaging": "4.5",
+    "deliveryTime": "5",
+    "comment": "غذا خوب بود"
+  },
+  {
+    "author": "torabi",
+    "restaurant": "nimkat",
+    "quality": "3",
+    "packaging": "4.5",
+    "deliveryTime": "3.5",
+    "comment": "غذا دیر رسید"
+  },
+  {
+    "author": "farshad",
+    "restaurant": "nimkat",
+    "quality": "4",
+    "packaging": "4.5",
+    "deliveryTime": "4",
+    "comment": "نسبتا خوب بود"
+  },
+  {
+    "author": "elahe",
+    "restaurant": "nimkat",
+    "quality": "3.5",
+    "packaging": "4.5",
+    "deliveryTime": "3.5",
+    "comment": "خوش طعم نبود "
   }
 ]

@@ -145,5 +145,89 @@
     "ingredients": "",
     "foodType": "sandwich",
     "restaurant": "ashpazkhane-sefid"
+  },
+  {
+    "name": "مارگاریتا",
+    "price": "26500",
+    "ingredients": "سس گوجه، ریحان و پنیر پارمسان",
+    "foodType": "pizza",
+    "restaurant": "nimkat"
+  },
+  {
+    "name": "مخصوص نیمکت",
+    "price": "53000",
+    "ingredients": "سس گوجه، ژامبون گوشت، پنیر موتزارلا",
+    "foodType": "pizza",
+    "restaurant": "nimkat"
+  },
+  {
+    "name": "فیله مرغ",
+    "price": "28500",
+    "ingredients": "",
+    "foodType": "sandwich",
+    "restaurant": "nimkat"
+  },
+  {
+    "name": "مرغ کاری",
+    "price": "35000",
+    "ingredients": "",
+    "foodType": "sandwich",
+    "restaurant": "nimkat"
+  },
+  {
+    "name": "سالاد اسپرینگ",
+    "price": "30000",
+    "ingredients": "کاهو فرانسه، کاهو پیچ، جوانه،سس مخصوص",
+    "foodType": "salad",
+    "restaurant": "nimkat"
+  },
+  {
+    "name": "سالاد روسی",
+    "price": "16000",
+    "ingredients": "سیب زمینی، پیازچه، سس مایونز",
+    "foodType": "salad",
+    "restaurant": "continer"
+  },
+  {
+    "name": "تبوله",
+    "price": "14000",
+    "ingredients": "نعنا، جعفری، پیازچه و گوجه",
+    "foodType": "salad",
+    "restaurant": "continer"
+  },
+  {
+    "name": "تست مرغ",
+    "price": "25000",
+    "ingredients": "مرغ، پنیر خامه ای ،هویج",
+    "foodType": "sandwich",
+    "restaurant": "continer"
+  },
+  {
+    "name": "تست بوقلمون",
+    "price": "26000",
+    "ingredients": "بوقلمون، فلفل دلمه ای ، قارج و پنیر",
+    "foodType": "sandwich",
+    "restaurant": "continer"
+  },
+  {
+    "name": "تست بوقلمون",
+    "price": "26000",
+    "ingredients": "بوقلمون، فلفل دلمه ای ، قارج و پنیر",
+    "foodType": "sandwich",
+    "restaurant": "continer"
+  },
+  {
+    "name": "برگر مرغ",
+    "price": "20000",
+    "ingredients": "مرغ و پنیر",
+    "foodType": "burger",
+    "restaurant": "continer"
+  },
+  {
+    "name": "برگر گوشت",
+    "price": "30000",
+    "ingredients": "گوشت گوساله و پنیر",
+    "foodType": "burger",
+    "restaurant": "continer"
   }
 ]
