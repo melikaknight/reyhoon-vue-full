@@ -137,5 +137,35 @@
       "sandwich",
       "pasta"
     ]
+  },
+  {
+    "name": "فست فود بوفه کانتینر",
+    "slug": "continer",
+    "address":"تهران، خیابان فرمانیه (لواسانی)، خیابان دیباجی شمالی",
+    "area": "farmaniye",
+    "logo": "/assets/images/logos/continer.jpeg",
+    "coverImage": "/assets/images/covers/iranian-food-restaurant.jpeg",
+    "openingTime": "10:00",
+    "closingTime": "15:30",
+    "foodTypes": [
+      "sandwich",
+      "burger",
+      "salad"
+    ]
+  },
+  {
+      "name": "نیمکت",
+      "slug": "nimkat",
+      "address":"تهران، خیابان فرمانیه (لواسانی)، جنب داروخانه",
+      "area": "farmaniye",
+      "logo": "/assets/images/logos/nimkat.jpeg",
+      "coverImage": "/assets/images/covers/iranian-food-restaurant.jpeg",
+      "openingTime": "12:00",
+      "closingTime": "15:30",
+      "foodTypes": [
+        "sandwich",
+        "salad",
+        "pizza"
+      ]
   }
 ]
