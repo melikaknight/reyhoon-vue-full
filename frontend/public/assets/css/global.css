@@ -191,7 +191,7 @@ p {
   -webkit-transition: 0.4s;
 }
 .mj-nav ul li a:hover {
-  color: #c40073;
+  color: #c40073 !important;
 }
 .mj-nav ul li:first-child a:first-child {
   border-left: 2px solid #cbcbcb;
